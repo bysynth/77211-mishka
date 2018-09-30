@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка | Каталог товаров</title>
+</head>
+
+<body class="page">
+
+  <header class="header page__header">
+    <a class="header__logo" href="index.html">
+      <img class="header__logo-image" src="https://placehold.it/86x35" alt="Мишка логотип" width="86" height="35">
+    </a>
+    <nav class="navigation header__navigation">
+      <button class="navigation__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="navigation__wrapper">
+        <ul class="sections-list navigation__list">
+          <li class="sections-list__item">
+            <a class="sections-list__link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="sections-list__item">
+            <a class="sections-list__link">Вязание на заказ</a>
+          </li>
+        </ul>
+        <ul class="interactive-list navigation__list">
+          <li class="interactive-list__item">
+            <a class="interactive-list__search" href="search.html">Поиск по сайту</a>
+          </li>
+          <li class="interactive-list__item">
+            <a class="interactive-list__basket" href="basket.html">Корзина: пока пуста</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <ul class="promo-links header__promo-links">
+      <li class="promo-links__item">
+        <a class="promo-links__link" href="#">Новые поступления</a>
+      </li>
+      <li class="promo-links__item">
+        <a class="promo-links__link" href="#">Распродажа</a>
+      </li>
+    </ul>
+    <p class="delivery header__delivery">Бесплатная доставка по России</p>
+    <section class="hero hero--catalog-page header__hero">
+      <h1 class="hero__title title">Каталог товаров</h1>
+    </section>
+  </header>
+
+  <main class="main page__main">
+
+  </main>
+
+  <section class="footer page__footer">
+    <a class="footer__logo">
+      <img class="footer__logo-image" src="https://placehold.it/102x34" alt="Мишка логотип в футере" width="102" height="34">
+    </a>
+    <ul class="social footer__social">
+      <li class="social__item">
+        <a class="social__link social__link--instagram" href="#">
+          <span class="visually-hidden">Мы в Instagram</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--facebook" href="#">
+          <span class="visually-hidden">Мы в Facebook</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--twitter" href="#">
+          <span class="visually-hidden">Мы в Twitter</span>
+        </a>
+      </li>
+    </ul>
+    <a class="footer__link footer__link--icon-academy" href="https://htmlacademy.ru/intensive/adaptive">Разработано</a>
+  </section>
+  <!-- Modals -->
+  <div class="overlay"></div>
+  <section class="modal modal-basket page__modal">
+    <h2 class="modal-basket__title title">Добавить в корзину</h2>
+    <p class="modal-basket__text">Выберите размер:</p>
+    <div class="modal-basket__size">
+      <button class="button modal-basket__size-button modal-basket__size-button--active">S</button>
+      <button class="button modal-basket__size-button">M</button>
+      <button class="button modal-basket__size-button">L</button>
+    </div>
+    <a class="button modal-basket__add" href="#">Добавить</a>
+  </section>
+
+</body>
+
+</html>
