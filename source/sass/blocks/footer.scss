@@ -1,0 +1,29 @@
+.footer {
+  @include layout-padding;
+
+  background-color: #f1f1f1;
+}
+
+.footer__social {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+}
+
+.footer__link {
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 18px;
+  color: $link-color;
+}
+
+.footer__link-icon {
+  margin-left: 30px;
+}
