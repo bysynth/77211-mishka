@@ -1,0 +1,19 @@
+.datasheet {
+  width: 100%;
+  margin-bottom: 28px;
+
+  border-spacing: 0;
+  border-color: none;
+}
+
+.datasheet__cell {
+  @include border-bottom;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 1.2;
+}
+
+.datasheet__cell--width {
+  width: 100px;
+}
