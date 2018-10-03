@@ -1,0 +1,12 @@
+.social {
+  @include list-style-clean;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 40px;
+}
