@@ -1,0 +1,53 @@
+// .navigation {
+//
+// }
+
+// .navigation__wrapper {
+//   display: none;
+// }
+
+.navigation__list {
+  @include list-style-clean;
+}
+
+.navigation__item {
+  @include border-bottom;
+  @include layout-padding;
+
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.navigation__link {
+  display: block;
+  padding-left: 46px;
+
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: bold;
+  color: $link-color;
+  &:hover {
+    color: rgba($color: $link-color, $alpha: 0.6);
+  }
+  &:active {
+    color: rgba($color: $link-color, $alpha: 0.3);
+  }
+}
+
+.navigation__link--interactive {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navigation__link-icon {
+  margin-right: 30px;
+}
+
+.navigation__icon-search {
+  margin-right: 28px;
+}
+
+.navigation__icon-basket {
+  margin-right: 25px;
+}
