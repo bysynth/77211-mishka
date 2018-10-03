@@ -1,0 +1,32 @@
+.header__wrapper {
+  @include border-bottom;
+  @include layout-padding;
+  display: flex;
+  align-items: center;
+  min-height: 79px
+}
+
+.header__logo {
+  display: block;
+  margin: auto;
+}
+
+.header__logo-image {
+  width: 86px;
+  height: 35px;
+}
+
+.header__toggle {
+  width: 21px;
+  height: 20px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.header__toggle--close {
+  background-image: url("../img/icon-menu-close.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
