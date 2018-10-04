@@ -5,11 +5,12 @@
 @import "globals.scss";
 @import "visually-hidden.scss";
 @import "blocks/page.scss";
+@import "blocks/main.scss";
+@import "blocks/title.scss";
 @import "blocks/button.scss";
 @import "blocks/header.scss";
 @import "blocks/navigation.scss";
 @import "blocks/hero.scss";
-@import "blocks/title.scss";
 @import "blocks/featured.scss";
 @import "blocks/datasheet.scss";
 @import "blocks/about.scss";
@@ -17,3 +18,10 @@
 @import "blocks/contacts.scss";
 @import "blocks/footer.scss";
 @import "blocks/social.scss";
+@import "blocks/form.scss";
+@import "blocks/products-list.scss";
+@import "blocks/product.scss";
+@import "blocks/video.scss";
+@import "blocks/overlay.scss";
+@import "blocks/modal.scss";
+@import "blocks/modal-basket.scss";
