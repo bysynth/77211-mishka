@@ -26,9 +26,11 @@
   line-height: 24px;
   font-weight: bold;
   color: $link-color;
+
   &:hover {
     color: rgba($color: $link-color, $alpha: 0.6);
   }
+
   &:active {
     color: rgba($color: $link-color, $alpha: 0.3);
   }
