@@ -2,19 +2,6 @@
   display: block;
 }
 
-.main--form {
-  @include layout-padding;
-}
-
-.main__text {
-  @include margin-clean;
-
-  margin-bottom: 20px;
-
-  font-size: 13px;
-  line-height: 24px;
-}
-
 .main__catalog {
   @include layout-padding;
 }
