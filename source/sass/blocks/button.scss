@@ -1,0 +1,28 @@
+.button {
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+  padding-right: 10px;
+  padding-bottom: 13px;
+  padding-left: 10px;
+
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: $secondary-text;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  border: 2px solid $secondary-text;
+
+  &:hover {
+    color: #ffffff;
+
+    background-color: $secondary-text;
+  }
+
+  &:active {
+    color: rgba($color: #ffffff, $alpha: 0.3);
+  }
+}

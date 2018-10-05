@@ -1,0 +1,15 @@
+.page {
+  /* temp */
+  width: 320px;
+  margin: 0 auto;
+  outline: 1px solid red;
+  /* temp */
+
+  position: relative;
+
+  font-family: "Open sans", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: normal;
+  color: $secondary-text;
+}

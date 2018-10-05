@@ -1,0 +1,23 @@
+@mixin layout-padding {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+@mixin list-style-clean {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@mixin border-bottom {
+  border-bottom: 1px solid #ececec;
+}
+
+@mixin margin-clean {
+  margin: 0;
+}
+
+@mixin padding-clean {
+  padding: 0;
+}

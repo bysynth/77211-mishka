@@ -1,0 +1,10 @@
+.modal {
+  position: fixed;
+  z-index: 210;
+
+  display: none;
+}
+
+.modal--show {
+  display: block;
+}
