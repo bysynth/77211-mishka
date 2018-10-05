@@ -1,0 +1,13 @@
+.catalog {
+  @include layout-padding;
+
+  padding-top: 30px;
+}
+
+.catalog__list {
+  @include list-style-clean;
+}
+
+.catalog__item {
+  margin-bottom: 30px;
+}
