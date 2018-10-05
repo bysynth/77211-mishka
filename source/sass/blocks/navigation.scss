@@ -12,15 +12,13 @@
 
 .navigation__item {
   @include border-bottom;
-  @include layout-padding;
-
-  padding-top: 25px;
-  padding-bottom: 25px;
 }
 
 .navigation__link {
   display: block;
-  padding-left: 46px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 76px;
 
   font-size: 17px;
   line-height: 24px;
@@ -29,27 +27,39 @@
 
   &:hover {
     color: rgba($color: $primary-text, $alpha: 0.6);
+
+    & .navigation__icon {
+      opacity: 1;
+    }
+
+    & .navigation__icon path {
+      fill: #63d1bb;
+    }
   }
 
   &:active {
     color: rgba($color: $primary-text, $alpha: 0.3);
+
+    & .navigation__icon {
+      opacity: 0.3;
+    }
   }
 }
 
 .navigation__link--interactive {
-  padding-left: 0;
   display: flex;
   align-items: center;
+  padding-left: 30px;
 }
 
-.navigation__link-icon {
-  margin-right: 30px;
+.navigation__icon {
+  opacity: 0.2;
 }
 
-.navigation__icon-search {
+.navigation__icon--search {
   margin-right: 28px;
 }
 
-.navigation__icon-basket {
+.navigation__icon--cart {
   margin-right: 25px;
 }
