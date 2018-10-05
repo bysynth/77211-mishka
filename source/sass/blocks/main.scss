@@ -2,10 +2,6 @@
   display: block;
 }
 
-.main__catalog {
-  @include layout-padding;
-}
-
-.main__video {
-  margin-bottom: 58px;
+.main--catalog {
+  padding-bottom: 58px;
 }
