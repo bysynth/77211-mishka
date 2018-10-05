@@ -1,7 +1,7 @@
 .about {
   @include layout-padding;
 
-  margin-bottom: 30px;
+  padding-top: 33px;
 }
 
 .about__title {
@@ -31,10 +31,12 @@
   &::before {
     content: "";
     position: absolute;
-    width: 50px;
-    height: 30px;
     top: 0;
     left: 0;
+
+    width: 50px;
+    height: 30px;
+
     background-repeat: no-repeat;
     background-position: 0 0;
   }

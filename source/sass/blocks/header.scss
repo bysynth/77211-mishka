@@ -1,10 +1,7 @@
-.header {
-  margin-bottom: 30px;
-}
-
 .header__wrapper {
   @include border-bottom;
   @include layout-padding;
+
   display: flex;
   align-items: center;
   min-height: 79px;

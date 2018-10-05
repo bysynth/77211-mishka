@@ -1,5 +1,6 @@
 .contacts {
-  margin-bottom: 40px;
+  padding-top: 33px;
+  padding-bottom: 40px;
 }
 
 .contacts__title {
@@ -8,6 +9,7 @@
 
 .contacts__data {
   @include layout-padding;
+
   margin-bottom: 40px;
 }
 
@@ -22,6 +24,7 @@
 
 .contacts__link {
   position: relative;
+
   color: $secondary-text;
 
   &:hover {
@@ -35,10 +38,12 @@
   &::after {
     content: "";
     position: absolute;
-    width: 100%;
-    height: 1px;
     bottom: -5px;
     left: 0;
+
+    width: 100%;
+    height: 1px;
+
     background-color: #62d1ba;
   }
 
@@ -53,6 +58,6 @@
 }
 
 .contacts__write-us {
-  margin: 0 auto;
   width: 260px;
+  margin: 0 auto;
 }

@@ -1,12 +1,14 @@
 .reviews {
-  margin-bottom: 33px;
+  padding-top: 30px;
 
   &::after {
     content: "";
+
     display: block;
     width: 100%;
-    margin-top: 42px;
     height: 6px;
+    margin-top: 42px;
+
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
     background-position: 0 0;
@@ -47,8 +49,8 @@
 }
 
 .reviews__author-link {
-  font-weight: normal;
   line-height: 30px;
+  font-weight: normal;
   color: $primary-text;
 }
 
