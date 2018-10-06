@@ -2,78 +2,39 @@
   @include layout-padding;
 
   padding-top: 33px;
+  padding-bottom: 20px;
 }
 
 .about__title {
   @include margin-clean;
+  @include title;
 
   margin-bottom: 25px;
 }
+
+// .about__wrapper {
+//   display: flex;
+// }
 
 .about__list {
   @include list-style-clean;
-
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .about__item {
-  position: relative;
-
   margin-bottom: 25px;
-  padding-top: 50px;
 
   font-size: 17px;
   line-height: 20px;
   font-weight: bold;
+  color: $primary-text;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+.about__icon {
+  display: block;
+  margin-bottom: 20px;
 
-    width: 50px;
-    height: 30px;
-
-    background-repeat: no-repeat;
-    background-position: 0 0;
+  & path {
+    fill: #63d1bb;
   }
 }
 
-.about__item--icon-flower {
-  &::before {
-    background-image: url("https://placehold.it/50x30");
-  }
-}
-
-.about__item--icon-rubl {
-  &::before {
-    background-image: url("https://placehold.it/50x30");
-  }
-}
-
-.about__item--icon-heart {
-  &::before {
-    background-image: url("https://placehold.it/50x30");
-  }
-}
-
-.about__item--icon-tangle {
-  &::before {
-    background-image: url("https://placehold.it/50x30");
-  }
-}
-
-.about__item--icon-rocket {
-  &::before {
-    background-image: url("https://placehold.it/50x30");
-  }
-}
-
-.about__item--icon-gift {
-  &::before {
-    background-image: url("https://placehold.it/50x30");
-  }
-}
