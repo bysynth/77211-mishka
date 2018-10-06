@@ -1,16 +1,21 @@
 .header__wrapper {
   @include border-bottom;
-  @include layout-padding;
+
+  position: relative;
 
   display: flex;
+  justify-content: center;
   align-items: center;
   min-height: 79px;
 }
 
-.header__logo {
+.header__logo-link {
   display: block;
-  margin: auto;
 }
+
+// .header__logo-picture {
+
+// }
 
 .header__logo-image {
   width: 86px;
@@ -18,22 +23,32 @@
 }
 
 .header__toggle {
+  position: absolute;
+  top: 50%;
+  right: 0;
+
+  display: block;
   width: 21px;
   height: 20px;
+  padding-top: 39px;
+  padding-right: 39px;
+  padding-bottom: 39px;
+  padding-left: 39px;
 
   background-color: transparent;
   border: none;
+  transform: translateY(-50%);
   cursor: pointer;
 }
 
 .header__toggle--close {
   background-image: url("../img/icon-menu-close.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: 50% 50%;
 }
 
 .header__toggle--open {
   background-image: url("../img/icon-menu-open.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: 50% 50%;
 }
