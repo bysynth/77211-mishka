@@ -22,8 +22,18 @@
   font-weight: bold;
   line-height: 18px;
   color: $primary-text;
+
+  &:hover .footer__link-icon,
+  &:focus .footer__link-icon {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .footer__link-icon {
   margin-left: 30px;
+  fill: #63d1bb;
 }
