@@ -1,13 +1,10 @@
 .reviews {
-  padding-top: 30px;
-
   &::after {
     content: "";
 
     display: block;
     width: 100%;
     height: 6px;
-    margin-top: 42px;
 
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
@@ -16,22 +13,25 @@
   }
 }
 
+.reviews__content {
+  @include layout-padding;
+
+  padding-top: 30px;
+  padding-bottom: 42px;
+}
+
 .reviews__title {
   @include margin-clean;
-  @include layout-padding;
+  @include title;
 
   margin-bottom: 25px;
 }
 
 .reviews__list {
-  @include layout-padding;
-
-  margin-bottom: 40px;
+  @include list-style-clean;
 }
 
 .reviews__item {
-  @include margin-clean;
-
   margin-bottom: 20px;
 }
 
@@ -42,6 +42,8 @@
 }
 
 .reviews__author-name {
+  @include margin-clean;
+
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
@@ -62,16 +64,25 @@
 }
 
 .reviews__toggle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 130px;
   height: 50px;
   padding: 0;
 
   background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   border: 1px solid #ececec;
   cursor: pointer;
+}
+
+//TODO: эффекты при ховере/активе для table/desktop
+
+.reviews__toggle--left {
+  background-image: url("../img/icon-left-arrow.svg");
+}
+
+.reviews__toggle--right {
+  background-image: url("../img/icon-right-arrow.svg");
 }
 
 .reviews__toggle:first-child {
