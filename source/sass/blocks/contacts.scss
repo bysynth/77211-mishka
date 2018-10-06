@@ -5,14 +5,14 @@
 .contacts__info {
   @include layout-padding;
 
-  padding-top: 33px;
-  padding-bottom: 10px;
+  padding-top: 35px;
+  padding-bottom: 7px;
 }
 
 .contacts__title {
   @include margin-clean;
 
-  margin-bottom: 35px;
+  margin-bottom: 26px;
   font-size: 18px;
   font-weight: bold;
   color: $primary-text;
@@ -24,7 +24,7 @@
 
 .contacts__row {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .contacts__section-value {
@@ -62,8 +62,7 @@
 }
 
 .contacts__map {
-  margin-bottom: 40px;
-  overflow: hidden;
+  margin-bottom: 42px;
 }
 
 .contacts__write-us {

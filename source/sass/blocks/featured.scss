@@ -8,7 +8,7 @@
 
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
-    background-position: 0 0;
+    background-position: 50% 0;
     background-size: contain;
   }
 }
@@ -16,12 +16,12 @@
 .featured__content {
   @include layout-padding;
 
-  padding-top: 30px;
-  padding-bottom: 42px;
+  padding-top: 27px;
+  padding-bottom: 36px;
 }
 
 .featured__title {
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 }
 
 .featured__name {
@@ -50,14 +50,14 @@
 .featured__description {
   @include margin-clean;
 
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 
   line-height: 24px;
 }
 
 .featured__picture {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 // .featured__image {
@@ -71,7 +71,7 @@
 .featured__price {
   @include margin-clean;
 
-  margin-bottom: 20px;
+  margin-bottom: 26px;
 
   font-size: 17px;
   line-height: 24px;

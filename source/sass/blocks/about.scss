@@ -1,15 +1,15 @@
 .about {
   @include layout-padding;
 
-  padding-top: 33px;
-  padding-bottom: 20px;
+  padding-top: 27px;
+  padding-bottom: 10px;
 }
 
 .about__title {
   @include margin-clean;
   @include title;
 
-  margin-bottom: 25px;
+  margin-bottom: 32px;
 }
 
 // .about__wrapper {
@@ -18,23 +18,62 @@
 
 .about__list {
   @include list-style-clean;
+
+  margin-bottom: 29px;
 }
 
 .about__item {
-  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 29px;
 
   font-size: 17px;
   line-height: 20px;
   font-weight: bold;
   color: $primary-text;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .about__icon {
   display: block;
-  margin-bottom: 20px;
 
   & path {
     fill: #63d1bb;
   }
 }
 
+.about__icon--flower {
+  margin-bottom: 18px;
+  margin-left: 8px;
+}
+
+.about__icon--money {
+  margin-bottom: 26px;
+}
+
+.about__icon--heart {
+  margin-top: 6px;
+  margin-bottom: 21px;
+  margin-left: 7px;
+}
+
+.about__icon--ball {
+  margin-top: 3px;
+  margin-bottom: 17px;
+  margin-left: 3px;
+}
+
+.about__icon--rocket {
+  margin-top: 4px;
+  margin-bottom: 27px;
+  margin-left: -6px;
+}
+
+.about__icon--gift {
+  margin-top: 2px;
+  margin-bottom: 20px;
+  margin-left: 3px;
+}
