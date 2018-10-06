@@ -16,6 +16,7 @@
 .hero--inner-page {
   padding-top: 75px;
   padding-bottom: 75px;
+
   background-color: #f1f1f1;
 }
 
@@ -45,14 +46,6 @@
   display: flex;
 }
 
-.hero__item--interior {
-  background-color: #63d1bb;
-}
-
-.hero__item--toy {
-  background-color: #56c3b2;
-}
-
 .hero__link {
   display: flex;
   justify-content: space-between;
@@ -65,6 +58,29 @@
   line-height: 24px;
   font-weight: bold;
   color: #ffffff;
+
+  &:active .hero__icon,
+  &:active .hero__link-text {
+    opacity: 0.3;
+  }
+}
+
+.hero__link--interior {
+  background-color: #63d1bb;
+
+  &:hover,
+  &:focus {
+    background-color: #59d5bc;
+  }
+}
+
+.hero__link--toy {
+  background-color: #56c3b2;
+
+  &:hover,
+  &:focus {
+    background-color: #46c1ae;
+  }
 }
 
 .hero__link-text {
@@ -72,10 +88,18 @@
   width: 130px;
 }
 
-.hero__icon-interion {
-  padding-right: 33px;
+.hero__icon {
+  opacity: 0.5;
+
+  & path {
+    fill: #149080;
+  }
 }
 
-.hero__icon-toy {
-  padding-right: 28px;
+.hero__icon--interior {
+  margin-right: 33px;
+}
+
+.hero__icon--toy {
+  margin-right: 28px;
 }
