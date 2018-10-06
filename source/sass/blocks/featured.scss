@@ -26,6 +26,7 @@
 
 .featured__name {
   @include margin-clean;
+  @include title;
 
   margin-bottom: 5px;
 
