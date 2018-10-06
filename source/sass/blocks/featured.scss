@@ -1,13 +1,10 @@
 .featured {
-  padding-top: 30px;
-
   &::after {
     content: "";
 
     display: block;
     width: 100%;
     height: 6px;
-    margin-top: 42px;
 
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: repeat-x;
@@ -16,9 +13,14 @@
   }
 }
 
-.featured__title {
+.featured__content {
   @include layout-padding;
 
+  padding-top: 30px;
+  padding-bottom: 42px;
+}
+
+.featured__title {
   margin-bottom: 20px;
 }
 
@@ -40,9 +42,9 @@
   text-transform: uppercase;
 }
 
-.featured__info {
-  @include layout-padding;
-}
+// .featured__info {
+//
+// }
 
 .featured__description {
   @include margin-clean;
@@ -52,14 +54,18 @@
   line-height: 24px;
 }
 
-.featured__image {
-  margin: 0 auto;
+.featured__picture {
+  display: block;
   margin-bottom: 20px;
 }
 
-.featured__buy {
-  @include layout-padding;
-}
+// .featured__image {
+
+// }
+
+// .featured__buy {
+//
+// }
 
 .featured__price {
   @include margin-clean;
