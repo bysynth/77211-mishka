@@ -10,7 +10,7 @@
 
 .product__wrapper {
   padding-right: 27px;
-  padding-bottom: 25px;
+  padding-bottom: 27px;
   padding-left: 27px;
 
   border: 1px solid #ececec;
@@ -19,14 +19,14 @@
 .product__info {
   @include border-bottom;
 
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 26px;
+  padding-bottom: 19px;
 }
 
 .product__title {
   @include margin-clean;
 
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 
   font-size: 17px;
   line-height: 24px;
@@ -55,7 +55,8 @@
 .product__buy {
   display: flex;
   justify-content: space-between;
-  padding-top: 25px;
+  align-items: center;
+  padding-top: 21px;
 }
 
 .product__price {

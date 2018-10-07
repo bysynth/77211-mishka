@@ -13,7 +13,7 @@
 }
 
 .hero--inner-page {
-  padding-top: 75px;
+  padding-top: 71px;
   padding-bottom: 75px;
 
   background-color: #f1f1f1;
@@ -37,6 +37,10 @@
   &--form {
     color: #231f20;
   }
+}
+
+.hero__title--inner-page {
+  margin-bottom: 0;
 }
 
 .hero__list {
