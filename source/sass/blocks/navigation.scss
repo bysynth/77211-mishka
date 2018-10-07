@@ -25,7 +25,8 @@
   font-weight: bold;
   color: $primary-text;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: rgba($color: $primary-text, $alpha: 0.6);
 
     & .navigation__icon {
