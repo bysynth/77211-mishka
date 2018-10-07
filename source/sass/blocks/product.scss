@@ -69,10 +69,26 @@
 .product__order {
   @include padding-clean;
 
-  width: 20px;
-  height: 19px;
+  width: 21px;
+  height: 18px;
 
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  &:hover .product__order-icon {
+    opacity: 1;
+  }
+
+  &:hover .product__order-icon path {
+    fill: #63d1bb;
+  }
+
+  &:active .product__order-icon {
+    opacity: 0.3;
+  }
+}
+
+.product__order-icon {
+  opacity: 0.2;
 }
