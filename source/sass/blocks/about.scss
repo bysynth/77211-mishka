@@ -1,9 +1,13 @@
+// Общие стили блока
+
 .about {
-  @include layout-padding;
+  @include layout-padding($mobile-padding);
 
   padding-top: 27px;
   padding-bottom: 10px;
 }
+
+// Заголовок
 
 .about__title {
   @include margin-clean;
@@ -11,6 +15,8 @@
 
   margin-bottom: 32px;
 }
+
+// Списки преимуществ
 
 // .about__wrapper {
 //   display: flex;
@@ -21,6 +27,8 @@
 
   margin-bottom: 29px;
 }
+
+// Элемент преимущества
 
 .about__item {
   display: flex;
@@ -37,6 +45,8 @@
   }
 }
 
+// Общий стиль для иконок
+
 .about__icon {
   display: block;
 
@@ -44,6 +54,8 @@
     fill: #63d1bb;
   }
 }
+
+// Стили иконок
 
 .about__icon--flower {
   margin-bottom: 18px;
@@ -76,4 +88,48 @@
   margin-top: 2px;
   margin-bottom: 20px;
   margin-left: 3px;
+}
+
+// TABLET
+
+@media (min-width: $tablet-width) {
+  // Общие стили блока
+
+  .about {
+    @include layout-padding($tablet-padding);
+
+    padding-top: 48px;
+    padding-bottom: 53px;
+  }
+
+  // Заголовок
+
+  .about__title {
+    margin-bottom: 48px;
+    margin-left: -4px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  // Списки преимуществ
+
+  .about__wrapper {
+    display: flex;
+  }
+
+  .about__list {
+    @include list-style-clean;
+
+    width: 50%;
+    margin-bottom: 29px;
+  }
+
+  // Элемент преимущества
+
+  .about__item {
+    margin-bottom: 58px;
+
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
