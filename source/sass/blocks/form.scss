@@ -20,34 +20,16 @@
 }
 
 .form__legend {
+  width: 62px;
+
   font-size: 17px;
   line-height: 16px;
   font-weight: bold;
   color: #63d1bb;
   text-transform: uppercase;
 
-  &--type {
-    padding-right: 28px;
-  }
-
-  &--color {
-    padding-right: 18px;
-  }
-
-  &--name {
-    padding-right: 23px;
-  }
-
-  &--tel {
-    padding-right: 32px;
-  }
-
   &--email {
-    padding-right: 25px;
-  }
-
-  &--additional {
-    padding-right: 25px;
+    width: 81px;
   }
 }
 
@@ -84,6 +66,10 @@
   }
 }
 
+.form__label-fix {
+  transform: translateY(10px);
+}
+
 .form__label--radio::before {
   background-color: #ffffff;
   border: 10px solid #ffffff;
@@ -111,10 +97,6 @@
   @include margin-clean;
 
   margin-bottom: 20px;
-
-  &:last-child {
-    margin-bottom: 10px;
-  }
 }
 
 .form__label--name {
@@ -125,7 +107,14 @@
   }
 }
 
+.form__input-wrapper {
+  position: relative;
+}
+
 .form__input {
+  position: relative;
+  z-index: 12;
+
   width: 100%;
   padding-top: 15px;
   padding-right: 40px;
@@ -134,12 +123,45 @@
   line-height: 18px;
   color: $secondary-text;
 
+  background-color: transparent;
   border: none;
   border-bottom: 2px solid #000000;
 
   &:hover,
   &:focus {
     border-bottom-color: #62d1ba;
+  }
+
+  &:hover + .form__icon {
+    opacity: 1;
+
+    & path {
+      fill: #62d1ba;
+    }
+  }
+
+  &:focus + .form__icon {
+    opacity: 1;
+
+    & path {
+      fill: #62d1ba;
+    }
+  }
+}
+
+.form__icon {
+  position: absolute;
+  top: 10px;
+  z-index: 11;
+
+  opacity: 0.2;
+
+  &--tel {
+    right: 5px;
+  }
+
+  &--email {
+    right: 5px;
   }
 }
 
@@ -149,19 +171,9 @@
 }
 
 .form__input--tel {
-  background-image: url("https://placehold.it/25x24");
-  background-repeat: no-repeat;
-  background-position: right 10px;
-
   &::placeholder {
     font-size: 19px;
   }
-}
-
-.form__input--email {
-  background-image: url("https://placehold.it/32x21");
-  background-repeat: no-repeat;
-  background-position: right 15px;
 }
 
 .form__input--textarea {
