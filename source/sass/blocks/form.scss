@@ -7,14 +7,42 @@
   @include padding-clean;
 
   margin-bottom: 10px;
-  padding-top: 25px;
-  padding-bottom: 25px;
 
   border: none;
   border-top: 1px solid #63d1bb;
 
+  &--type {
+    padding-top: 27px;
+    padding-bottom: 24px;
+  }
+
+  &--color {
+    padding-top: 25px;
+    padding-bottom: 21px;
+  }
+
+  &--fio {
+    padding-top: 29px;
+    padding-bottom: 21px;
+  }
+
+  &--tel {
+    padding-top: 12px;
+    padding-bottom: 22px;
+  }
+
+  &--email {
+    padding-top: 12px;
+    padding-bottom: 22px;
+  }
+
+  &--dop {
+    padding-top: 25px;
+    padding-bottom: 22px;
+  }
+
   &--last {
-    margin-bottom: 10px;
+    margin-bottom: 7px;
     padding-bottom: 0;
   }
 }
@@ -38,7 +66,7 @@
 }
 
 .form__inputs-item {
-  margin-bottom: 17px;
+  margin-bottom: 21px;
 
   &:last-child {
     margin-bottom: 0;
@@ -60,17 +88,19 @@
     content: "";
 
     flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    margin-right: 24px;
   }
 }
 
 .form__label-fix {
-  transform: translateY(10px);
+  transform: translateY(7px);
 }
 
 .form__label--radio::before {
+  width: 36px;
+  height: 36px;
+  margin-right: 25px;
+  margin-left: 2px;
+
   background-color: #ffffff;
   border: 10px solid #ffffff;
   border-radius: 50%;
@@ -81,7 +111,15 @@
   background-color: #62d1ba;
 }
 
+.form__label--toy::before {
+  margin-top: 2px;
+}
+
 .form__label--checkbox::before {
+  width: 40px;
+  height: 40px;
+  margin-right: 22px;
+
   background-color: #ffffff;
   border: 2px solid $secondary-text;
 }
@@ -96,7 +134,11 @@
 .form__field {
   @include margin-clean;
 
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .form__label--name {
@@ -116,9 +158,9 @@
   z-index: 12;
 
   width: 100%;
-  padding-top: 15px;
+  padding-top: 11px;
   padding-right: 40px;
-  padding-bottom: 15px;
+  padding-bottom: 16px;
 
   line-height: 18px;
   color: $secondary-text;
@@ -151,13 +193,13 @@
 
 .form__icon {
   position: absolute;
-  top: 10px;
+  top: 6px;
   z-index: 11;
 
   opacity: 0.2;
 
   &--tel {
-    right: 5px;
+    right: 8px;
   }
 
   &--email {
@@ -177,9 +219,11 @@
 }
 
 .form__input--textarea {
-  min-height: 140px;
-  padding-right: 18px;
-  padding-left: 18px;
+  min-height: 142px;
+  padding-top: 14px;
+  padding-right: 15px;
+  padding-bottom: 14px;
+  padding-left: 15px;
 
   border: 2px solid #000000;
 
