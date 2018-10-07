@@ -19,13 +19,17 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 25px;
-  padding-right: 40px;
+  padding-right: 20px;
   padding-bottom: 23px;
-  padding-left: 33px;
+  padding-left: 20px;
 }
 
 .video__title-icon {
   margin-right: 25px;
+
+  & path {
+    fill: #63d1bb;
+  }
 }
 
 .video__title-text {
@@ -48,8 +52,19 @@
   left: 50%;
 
   border: none;
+  background-color: transparent;
   transform: translate(-50%, -50%);
   cursor: pointer;
+
+  &:hover .video__play-icon,
+  &:focus .video__play-icon {
+    transform: scale(1.2);
+  }
+
+  &:active .video__play-icon {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
 }
 
 .video__description {
