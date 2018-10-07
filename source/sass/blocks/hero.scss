@@ -1,16 +1,15 @@
-.hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+// Стили блока для главной страницы
 
 .hero--main-page {
   padding-top: 71px;
 
+  background-color: #f9f9f9;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center -17px;
 }
+
+// Стили для внутренних страц
 
 .hero--inner-page {
   padding-top: 71px;
@@ -19,9 +18,11 @@
   background-color: #f1f1f1;
 }
 
+// Заголовок
+
 .hero__title {
   @include margin-clean;
-  @include layout-padding;
+  @include layout-padding($mobile-padding);
 
   margin-bottom: 122px;
 
@@ -43,6 +44,8 @@
   margin-bottom: 0;
 }
 
+// Блок ссылок
+
 .hero__list {
   @include list-style-clean;
 }
@@ -50,6 +53,8 @@
 // .hero__item {
 
 // }
+
+// Ссылка-блок
 
 .hero__link {
   display: flex;
@@ -71,6 +76,8 @@
     opacity: 0.3;
   }
 }
+
+// Фоны ссылка-блока
 
 .hero__link--interior {
   background-color: #63d1bb;
@@ -95,6 +102,8 @@
   width: 130px;
 }
 
+// Иконки в ссылках-блоках
+
 .hero__icon {
   opacity: 0.5;
 
@@ -110,4 +119,83 @@
 
 .hero__icon--toy {
   margin-right: 27px;
+}
+
+// TABLET
+
+@media (min-width: $tablet-width) {
+  // Стили блока для главной страницы
+  .hero--main-page {
+    position: relative;
+    padding-top: 92px;
+
+    background-image: url("../img/hero-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center -62px;
+  }
+
+  .hero--main-page::after {
+    content: "";
+    position: absolute;
+    bottom: -14px;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    background-size: contain;
+  }
+
+  // Заголовок
+
+  .hero__title {
+    @include margin-clean;
+    @include layout-padding($tablet-padding);
+
+    margin-bottom: 373px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  // Блок ссылок
+
+  .hero__list {
+    @include list-style-clean;
+    @include layout-padding($tablet-padding);
+
+    display: flex;
+  }
+
+  .hero__item {
+    width: 50%;
+  }
+
+  // Ссылка-блок
+
+  .hero__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 117px;
+    padding-left: 36px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  // Фоны ссылка-блока
+
+  .hero__link-text {
+    display: block;
+    width: 130px;
+  }
+
+  // Иконки в ссылках-блоках
+
+  .hero__icon--toy {
+    margin-top: 5px;
+    margin-right: 34px;
+  }
 }
