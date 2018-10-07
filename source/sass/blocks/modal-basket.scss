@@ -6,7 +6,7 @@
 
   min-width: 320px;
   padding-top: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 46px;
 
   background-color: #ffffff;
   border: 1px solid #c7c7c7;
@@ -17,7 +17,7 @@
 .modal-basket__title {
   @include margin-clean;
 
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 
   font-size: 25px;
   font-weight: bold;
@@ -28,7 +28,7 @@
 .modal-basket__text {
   @include margin-clean;
 
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 
   text-align: center;
 }
@@ -36,12 +36,12 @@
 .modal-basket__size {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 }
 
 .modal-basket__size-button {
   width: 82px;
-
+  margin-right: 7px;
   background-color: transparent;
   border-color: #ececec;
 
@@ -57,13 +57,25 @@
     border-color: #63d1bb;
     outline: none;
   }
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .modal-basket__size-button--active {
   border-color: #63d1bb;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: #63d1bb;
+  }
 }
 
 .modal-basket__add {
+  padding-top: 16px;
+  padding-bottom: 16px;
   color: #ffffff;
 
   background-color: #63d1bb;
