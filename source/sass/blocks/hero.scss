@@ -127,6 +127,7 @@
   // Стили блока для главной страницы
   .hero--main-page {
     position: relative;
+
     padding-top: 92px;
 
     background-image: url("../img/hero-tablet@1x.jpg");
@@ -134,17 +135,30 @@
     background-position: center -62px;
   }
 
-  .hero--main-page::after {
+  .hero--main-page::after,
+  .hero--inner-page::after {
     content: "";
     position: absolute;
     bottom: -14px;
     left: 0;
+
     width: 100%;
     height: 24px;
+
     background-image: url("../img/bg-zigzag-fill.svg");
     background-repeat: repeat-x;
     background-position: 0 0;
     background-size: contain;
+  }
+
+  // Стили для внутренних страц
+
+  .hero--inner-page {
+    position: relative;
+    padding-top: 34px;
+    padding-bottom: 78px;
+
+    background-color: #f1f1f1;
   }
 
   // Заголовок
@@ -157,6 +171,10 @@
 
     font-size: 43px;
     line-height: 50px;
+  }
+
+  .hero__title--inner-page {
+    margin-bottom: 0;
   }
 
   // Блок ссылок
