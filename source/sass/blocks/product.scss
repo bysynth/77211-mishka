@@ -1,3 +1,5 @@
+// Тень карточки товара
+
 .product {
   &:hover {
     box-shadow: 0 6px 10px 0 rgba($color: $primary-text, $alpha: 0.1);
@@ -8,6 +10,8 @@
   }
 }
 
+// Обертка описания товара с ценой
+
 .product__wrapper {
   padding-right: 27px;
   padding-bottom: 27px;
@@ -16,12 +20,16 @@
   border: 1px solid #ececec;
 }
 
+// Обертка для названи я описания
+
 .product__info {
-  @include border-bottom;
+  @include border(bottom);
 
   padding-top: 26px;
   padding-bottom: 19px;
 }
+
+// Название товара
 
 .product__title {
   @include margin-clean;
@@ -32,6 +40,8 @@
   line-height: 24px;
   font-weight: bold;
 }
+
+// Ссылка-название
 
 .product__link {
   color: $primary-text;
@@ -46,11 +56,15 @@
   }
 }
 
+// Описание товара
+
 .product__description {
   @include margin-clean;
 
   font-size: 13px;
 }
+
+// Обертка для цены и кнопки
 
 .product__buy {
   display: flex;
@@ -59,6 +73,8 @@
   padding-top: 21px;
 }
 
+// Цена
+
 .product__price {
   @include margin-clean;
 
@@ -66,6 +82,8 @@
   font-weight: bold;
   color: $primary-text;
 }
+
+// Кнопка "В корзину"
 
 .product__order {
   @include padding-clean;
@@ -90,6 +108,81 @@
   }
 }
 
+// Иконка кнопки
+
 .product__order-icon {
   opacity: 0.2;
+}
+
+// ---------- TABLET ----------
+
+@media (min-width: $tablet-width) {
+  // Изменение раскладки блока
+
+  .product {
+    display: flex;
+  }
+
+  // Картинка
+
+  .product__picture {
+    width: 50%;
+  }
+
+  // Обертка описания товара с ценой
+
+  .product__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-right: 26px;
+    padding-bottom: 26px;
+    padding-left: 26px;
+  }
+
+  // Обертка для названи я описания
+
+  .product__info {
+    @include border(bottom);
+
+    flex-grow: 1;
+    padding-top: 25px;
+    padding-bottom: 19px;
+  }
+
+  // Название товара
+
+  .product__title {
+    width: 230px;
+    margin-bottom: 5px;
+
+    font-size: 20px;
+  }
+
+
+  // Описание товара
+
+  .product__description {
+    font-size: 15px;
+  }
+
+  // Обертка для цены и кнопки
+
+  .product__buy {
+    padding-top: 22px;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  // Цена
+
+  .product__price {
+    font-size: 17px;
+  }
+
+  // Иконка кнопки
+
+  .product__order {
+    margin-bottom: 4px;
+  }
 }

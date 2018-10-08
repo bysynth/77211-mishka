@@ -1,5 +1,5 @@
 .catalog {
-  @include layout-padding;
+  @include layout-padding($mobile-padding);
 
   padding-top: 31px;
 }
@@ -10,4 +10,18 @@
 
 .catalog__item {
   margin-bottom: 30px;
+}
+
+// ---------- TABLET ----------
+
+@media (min-width: $tablet-width) {
+  .catalog {
+    @include layout-padding($tablet-padding);
+
+    padding-top: 81px;
+  }
+
+  .catalog__item {
+    margin-bottom: 54px;
+  }
 }
