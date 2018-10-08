@@ -1,6 +1,8 @@
+// Общие стили блока и тень
+
 .video {
-  margin-right: 30px;
-  margin-left: 30px;
+  margin-right: $mobile-padding;
+  margin-left: $mobile-padding;
   padding-bottom: 33px;
 
   border: 1px solid #ececec;
@@ -14,6 +16,8 @@
   }
 }
 
+// Заголовок блока
+
 .video__title {
   display: flex;
   justify-content: space-between;
@@ -25,8 +29,8 @@
 }
 
 .video__title-icon {
-  margin-left: 7px;
   margin-right: 20px;
+  margin-left: 7px;
 
   & path {
     fill: #63d1bb;
@@ -41,9 +45,13 @@
   color: $primary-text;
 }
 
+// Видео-плеер картинка
+
 .video__player {
   position: relative;
 }
+
+// Кнопка плеера
 
 .video__play-button {
   @include padding-clean;
@@ -68,6 +76,8 @@
   }
 }
 
+// Описание
+
 .video__description {
   padding-top: 28px;
   padding-right: 33px;
@@ -81,4 +91,62 @@
 
   font-size: 13px;
   line-height: 24px;
+}
+
+// ---------- TABLET ----------
+
+@media (min-width: $tablet-width) {
+  // Общие стили блока и тень
+
+  .video {
+    display: flex;
+    flex-direction: column;
+    margin-right: $tablet-padding;
+    margin-left: $tablet-padding;
+    padding-bottom: 45px;
+  }
+
+  // Заголовок блока
+
+  .video__title {
+    order: 2;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 25px;
+    padding-right: 20px;
+    padding-bottom: 23px;
+    padding-left: 23px;
+  }
+
+  .video__title-icon {
+    margin-right: 22px;
+    margin-left: 8px;
+  }
+
+  .video__title-text {
+    font-size: 20px;
+  }
+
+  // Видео-плеер картинка
+
+  .video__player {
+    order: 1;
+    margin-bottom: 9px;
+  }
+
+  // Описание
+
+  .video__description {
+    order: 3;
+    padding-top: 4px;
+    padding-right: 41px;
+    padding-left: 41px;
+  }
+
+  .video__text {
+    margin-bottom: 36px;
+
+    font-size: 15px;
+    line-height: 30px;
+  }
 }
