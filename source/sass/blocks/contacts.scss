@@ -1,26 +1,31 @@
+// Общие стили блока
+
 .contacts {
   padding-bottom: 40px;
 }
 
+// Блок с контактными данными
+
 .contacts__info {
-  @include layout-padding;
+  @include layout-padding($mobile-padding);
 
   padding-top: 35px;
   padding-bottom: 7px;
 }
 
+// Заголовок
+
 .contacts__title {
   @include margin-clean;
 
   margin-bottom: 26px;
+
   font-size: 18px;
   font-weight: bold;
   color: $primary-text;
 }
 
-// .contacts__data {
-
-// }
+// Контактные данные
 
 .contacts__row {
   display: flex;
@@ -30,6 +35,8 @@
 .contacts__section-value {
   margin-left: 30px;
 }
+
+// Ссылка
 
 .contacts__link {
   position: relative;
@@ -61,11 +68,90 @@
   }
 }
 
+// Карта
+
 .contacts__map {
   margin-bottom: 42px;
 }
 
+// Кнопка
+
 .contacts__write-us {
   width: 260px;
   margin: 0 auto;
+}
+
+// TABLET
+
+@media (min-width: $tablet-width) {
+  // Общие стили блока
+
+  .contacts {
+    padding-bottom: 57px;
+  }
+
+  // Блок с контактными данными
+
+  .contacts__info {
+    @include layout-padding($tablet-padding);
+
+    padding-top: 61px;
+    padding-bottom: 26px;
+
+    font-size: 17px;
+  }
+
+  // Заголовок
+
+  .contacts__title {
+    position: relative;
+
+    margin-bottom: 49px;
+    margin-left: -5px;
+
+    font-size: 43px;
+    line-height: 50px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -15px;
+      right: 3px;
+
+      width: 47px;
+      height: 81px;
+
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+
+  // Обертка контактных данных
+
+  .contacts__data {
+    display: flex;
+  }
+
+  // Контактные данные
+
+  .contacts__row {
+    width: 50%;
+  }
+
+  .contacts__section-value {
+    margin-left: 23px;
+  }
+
+  // Карта
+
+  .contacts__map {
+    margin-bottom: 55px;
+  }
+
+  // Кнопка
+
+  .contacts__write-us {
+    width: 231px;
+  }
 }
