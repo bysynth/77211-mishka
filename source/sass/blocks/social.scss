@@ -1,11 +1,12 @@
 .social {
   @include list-style-clean;
 
-  width: 260px;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80px;
+  width: 260px;
+  padding-top: 15px;
+  padding-bottom: 16px;
 }
 
 .social__item {
@@ -30,4 +31,14 @@
 
 .social__icon {
   display: block;
+}
+
+// TABLET
+
+@media (min-width: $tablet-width) {
+  .social {
+    @include padding-clean;
+
+    width: 200px;
+  }
 }
