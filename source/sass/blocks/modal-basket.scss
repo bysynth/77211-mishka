@@ -1,6 +1,7 @@
-.modal-basket {
-  @include layout-padding;
+// Общие стили, позиционирование
 
+.modal-basket {
+  @include layout-padding($mobile-padding);
   top: 50%;
   left: 50%;
 
@@ -14,16 +15,23 @@
   transform: translate(-50%, -50%);
 }
 
+// Заголовок
+
 .modal-basket__title {
   @include margin-clean;
 
+  width: 148px;
+  margin-right: auto;
   margin-bottom: 12px;
+  margin-left: auto;
 
   font-size: 25px;
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
 }
+
+// Текст
 
 .modal-basket__text {
   @include margin-clean;
@@ -33,17 +41,23 @@
   text-align: center;
 }
 
+// Блок выбора размера
+
 .modal-basket__size {
   display: flex;
   justify-content: space-between;
   margin-bottom: 31px;
 }
 
+// Кнопка размера
+
 .modal-basket__size-button {
   width: 82px;
   margin-right: 7px;
+
   background-color: transparent;
   border-color: #ececec;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -63,6 +77,8 @@
   }
 }
 
+// Активная кнопка размера
+
 .modal-basket__size-button--active {
   border-color: #63d1bb;
 
@@ -73,11 +89,57 @@
   }
 }
 
+// Кнопка Добавить
+
 .modal-basket__add {
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+
+  line-height: 16px;
   color: #ffffff;
 
   background-color: #63d1bb;
   border: none;
+}
+
+// TABLET
+
+@media (min-width: $tablet-width) {
+  // Общие стили, позиционирование
+
+  .modal-basket {
+    @include layout-padding(108px);
+
+    min-width: 568px;
+    padding-top: 33px;
+    padding-bottom: 46px;
+  }
+
+  // Заголовок
+
+  .modal-basket__title {
+    width: auto;
+    margin-right: 0;
+    margin-bottom: 14px;
+    margin-left: 0;
+
+    font-size: 30px;
+    line-height: 57px;
+    text-align: left;
+    letter-spacing: -0.2px;
+  }
+
+  // Текст
+
+  .modal-basket__text {
+    margin-bottom: 21px;
+
+    font-size: 17px;
+  }
+
+  // Кнопка размера
+
+  .modal-basket__size-button {
+    width: 112px;
+  }
 }
