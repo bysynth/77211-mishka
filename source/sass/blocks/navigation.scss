@@ -2,13 +2,14 @@
 
 .navigation__logo {
   @include border(bottom);
+  @include border(top);
 
   position: relative;
 
   display: flex;
   justify-content: center;
-  align-items: center;
-  min-height: 79px;
+  padding-top: 21px;
+  padding-bottom: 22px;
 
   background-color: #ffffff;
 }
@@ -27,7 +28,7 @@
   display: block;
   width: 21px;
   height: 20px;
-  padding-top: 39px;
+  padding-top: 40px;
   padding-right: 41px;
   padding-bottom: 39px;
   padding-left: 41px;
@@ -58,6 +59,10 @@
 
 .navigation__wrapper-interactive {
   background-color: #ffffff;
+}
+
+.navigation__wrapper-promo {
+  display: none;
 }
 
 // Списки навигационных элементов и их элементы
@@ -129,7 +134,7 @@
   display: none;
 }
 
-// TABLET
+// ---------- TABLET ----------
 
 @media (min-width: $tablet-width) {
   .navigation {
@@ -142,8 +147,10 @@
   .navigation__logo {
     justify-content: flex-start;
     width: 48.17%;
-    min-height: 89px;
+    padding-bottom: 20px;
     padding-left: $tablet-padding;
+
+    border-top: none;
   }
 
   // Кнопка отображения меню в mobile версии
@@ -225,7 +232,124 @@
   .navigation__delivery {
     display: block;
     order: 3;
-    margin-left: auto;
     margin-right: 50px;
+    margin-left: auto;
+  }
+}
+
+// ---------- DESKTOP ----------
+
+@media (min-width: $desktop-width) {
+  .navigation {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  // Блок логотипа
+
+  .navigation__logo {
+    justify-content: center;
+    order: 2;
+    width: 305px;
+    padding-top: 8px;
+    padding-right: 46px;
+    padding-bottom: 7px;
+    padding-left: 0;
+  }
+
+  // Обертки списков навигации
+
+  .navigation__wrapper-top {
+    @include border(bottom);
+
+    order: 1;
+    width: 445px;
+    margin-left: 0;
+    padding-left: 50px;
+
+    background-color: #ffffff;
+  }
+
+  .navigation__wrapper-interactive {
+    order: 3;
+    width: 400px;
+    padding-right: 50px;
+  }
+
+  .navigation__wrapper-promo {
+    display: block;
+    order: 4;
+    width: 315px;
+    min-height: 61px;
+    margin-left: 50px;
+  }
+
+  // Списки навигационных элементов и их элементы
+
+  .navigation__list {
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  .navigation__item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    border-bottom: none;
+  }
+
+  .navigation__item--top-first {
+    @include border(right);
+
+    padding-right: 35px;
+  }
+
+  .navigation__item--top-second {
+    padding-left: 35px;
+    padding-right: 20px;
+  }
+
+  .navigation__item--search {
+    padding-left: 32px;
+  }
+
+  .navigation__item--basket {
+    padding-left: 31px;
+  }
+
+  .navigation__link--top {
+    padding: 0;
+
+    font-size: 17px;
+  }
+
+  .navigation__link--search {
+    padding: 0;
+
+    font-size: 0;
+  }
+
+  .navigation__link--basket {
+    padding: 0;
+  }
+
+  .navigation__link--promo {
+    padding: 0;
+
+    font-size: 15px;
+  }
+
+  // Иконки у ссылок навигации
+
+  .navigation__icon--cart {
+    margin-right: 33px;
+  }
+
+  // Текст о доставке
+
+  .navigation__delivery {
+    order: 5;
   }
 }
