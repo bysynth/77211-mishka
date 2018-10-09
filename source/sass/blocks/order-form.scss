@@ -1,5 +1,5 @@
 .order-form {
-  @include layout-padding;
+  @include layout-padding($mobile-padding);
 
   padding-top: 23px;
 }
@@ -11,4 +11,23 @@
 
   font-size: 13px;
   line-height: 24px;
+}
+
+// ---------- TABLET ----------
+
+@media (min-width: $tablet-width) {
+  .order-form {
+    @include padding-clean;
+
+    padding-top: 74px;
+  }
+
+  .order-form__text {
+    @include layout-padding($tablet-padding);
+
+    margin-bottom: 8px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
 }

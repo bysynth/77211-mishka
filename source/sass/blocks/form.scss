@@ -1,43 +1,41 @@
+// Отступ снизу
+
 .form {
   padding-bottom: 55px;
 }
+
+// Филдсеты
 
 .form__fieldset {
   @include margin-clean;
   @include padding-clean;
 
   margin-bottom: 10px;
+  padding-bottom: 21px;
 
   border: none;
-  border-top: 1px solid #63d1bb;
 
   &--type {
-    padding-top: 27px;
     padding-bottom: 24px;
   }
 
   &--color {
-    padding-top: 25px;
     padding-bottom: 21px;
   }
 
   &--fio {
-    padding-top: 29px;
     padding-bottom: 21px;
   }
 
   &--tel {
-    padding-top: 12px;
     padding-bottom: 22px;
   }
 
   &--email {
-    padding-top: 12px;
     padding-bottom: 22px;
   }
 
   &--dop {
-    padding-top: 25px;
     padding-bottom: 22px;
   }
 
@@ -47,8 +45,10 @@
   }
 }
 
+// Легенда
+
 .form__legend {
-  width: 62px;
+  position: relative;
 
   font-size: 17px;
   line-height: 16px;
@@ -56,10 +56,53 @@
   color: #63d1bb;
   text-transform: uppercase;
 
+  &--type {
+    margin-bottom: 27px;
+  }
+
+  &--color {
+    margin-bottom: 25px;
+  }
+
+  &--fio {
+    margin-bottom: 29px;
+  }
+
+  &--tel {
+    margin-bottom: 12px;
+  }
+
   &--email {
-    width: 81px;
+    margin-bottom: 12px;
+  }
+
+  &--dop {
+    margin-bottom: 25px;
   }
 }
+
+// Линия у легенды
+
+.form__legend::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 62px;
+
+  width: calc(100% - 62px);
+  height: 1px;
+
+  background-color: #63d1bb;
+}
+
+.form__legend--email::before {
+  content: "";
+  left: 81px;
+
+  width: calc(100% - 81px);
+}
+
+// Инпуты - список
 
 .form__inputs {
   @include list-style-clean;
@@ -72,6 +115,8 @@
     margin-bottom: 0;
   }
 }
+
+// Лабелы
 
 .form__label {
   display: flex;
@@ -95,6 +140,8 @@
   transform: translateY(7px);
 }
 
+// Радио
+
 .form__label--radio::before {
   width: 36px;
   height: 36px;
@@ -115,6 +162,8 @@
   margin-top: 2px;
 }
 
+// Чекбокс
+
 .form__label--checkbox::before {
   width: 40px;
   height: 40px;
@@ -130,6 +179,8 @@
   background-position: 50% 50%;
   background-size: 22px 16px;
 }
+
+// Поля для ФИО
 
 .form__field {
   @include margin-clean;
@@ -153,6 +204,8 @@
   position: relative;
 }
 
+// Инпуты - ТЕЛ, E-MAIL, ДОП
+
 .form__input {
   position: relative;
   z-index: 12;
@@ -162,6 +215,7 @@
   padding-right: 40px;
   padding-bottom: 16px;
 
+  font-size: 17px;
   line-height: 18px;
   color: $secondary-text;
 
@@ -191,6 +245,8 @@
   }
 }
 
+// Иконки в инпутах
+
 .form__icon {
   position: absolute;
   top: 6px;
@@ -218,6 +274,8 @@
   }
 }
 
+// Текстарея
+
 .form__input--textarea {
   min-height: 142px;
   padding-top: 14px;
@@ -235,6 +293,8 @@
   }
 }
 
+// Текст
+
 .form__text {
   @include margin-clean;
 
@@ -242,4 +302,228 @@
 
   font-size: 14px;
   line-height: 16px;
+}
+
+// ---------- TABLET ----------
+
+@media (min-width: $tablet-width) {
+  // Отступ снизу
+
+  .form {
+    padding-bottom: 51px;
+  }
+
+  // Филдсеты
+
+  .form__fieldset {
+    margin-bottom: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    &--type {
+      padding-bottom: 53px;
+    }
+
+    &--color {
+      padding-bottom: 26px;
+
+      background-color: #f1f1f1;
+    }
+
+    &--tel {
+      padding-bottom: 24px;
+
+      background-color: #f1f1f1;
+    }
+
+    &--email {
+      padding-top: 0;
+
+      background-color: #f1f1f1;
+      // padding-bottom: 22px;
+    }
+
+    &--dop {
+      padding-bottom: 52px;
+    }
+
+    // &--last {
+    //   margin-bottom: 7px;
+    //   padding-bottom: 0;
+    // }
+  }
+
+  // Обертка для содержимого филдсета
+
+  .form__fieldset-wrapper {
+    @include layout-padding($tablet-padding);
+
+    display: flex;
+  }
+
+  // Легенда
+
+  .form__legend {
+    width: 25%;
+    margin-top: 17px;
+  }
+
+  // Линия у легенды
+
+  .form__legend::before {
+    content: none;
+  }
+
+  //Инпуты - список
+
+  .form__inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 75%;
+
+    &--type {
+      display: block;
+    }
+  }
+
+  .form__inputs--type .form__inputs-item {
+    margin-bottom: 26px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .form__inputs--color .form__inputs-item {
+    margin-bottom: 24px;
+  }
+
+  // Лабелы
+
+  .form__label {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  .form__label-fix {
+    transform: translateY(0);
+  }
+
+  // Радио
+
+  .form__label--radio::before {
+    width: 48px;
+    height: 48px;
+    margin-right: 33px;
+    margin-left: 0;
+
+    border: 14px solid #ffffff;
+  }
+
+  // Чекбокс
+
+  .form__label--checkbox {
+    width: 239px;
+  }
+
+  .form__label--checkbox::before {
+    width: 54px;
+    height: 52px;
+    margin-right: 26px;
+
+    background-color: transparent;
+  }
+
+  .form__input-checkbox:checked + .form__label--checkbox::before {
+    background-size: 33px 22px;
+  }
+
+  // Поля для ФИО
+
+  .form__field-wrapper {
+    width: 75%;
+  }
+
+  .form__field {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .form__label--name {
+    margin-right: 25px;
+    margin-bottom: 0;
+  }
+
+  // Инпуты - ФИО, ТЕЛ, E-MAIL, ДОП
+
+  .form__input {
+    padding-top: 12px;
+    padding-right: 40px;
+    padding-bottom: 12px;
+    padding-left: 17px;
+
+    font-size: 19px;
+  }
+
+  .form__input::placeholder {
+    font-size: 19px;
+  }
+
+  .form__input-wrapper {
+    width: 75%;
+  }
+
+  // Иконки в инпутах
+
+  .form__icon {
+    top: 11px;
+
+    &--tel {
+      right: 26px;
+    }
+
+    &--email {
+      right: 22px;
+    }
+  }
+
+  //Текстарея
+
+  .form__input--textarea {
+    width: 75%;
+    padding-top: 13px;
+    padding-left: 15px;
+  }
+
+  // Обертка для кнопки и текста
+
+  .form__button-wrapper {
+    @include layout-padding($tablet-padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // Текст
+
+  .form__text {
+    order: 2;
+
+    margin-bottom: 0;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  // Кнопка
+
+  .form__send {
+    width: 230px;
+  }
 }
