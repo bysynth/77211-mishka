@@ -31,3 +31,19 @@
     line-height: 30px;
   }
 }
+
+// ---------- DESKTOP ----------
+
+@media (min-width: $desktop-width) {
+  .order-form {
+    padding-top: 123px;
+  }
+
+  .order-form__text {
+    width: 700px;
+    margin-right: auto;
+    margin-bottom: 8px;
+    margin-left: auto;
+    padding: 0;
+  }
+}
