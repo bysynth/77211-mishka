@@ -3,5 +3,13 @@
 }
 
 .main--catalog {
-  padding-bottom: 57px;
+  padding-bottom: 63px;
+}
+
+// ---------- DESKTOP ----------
+
+@media (min-width: $desktop-width) {
+  .main--catalog {
+    padding-bottom: 103px;
+  }
 }
