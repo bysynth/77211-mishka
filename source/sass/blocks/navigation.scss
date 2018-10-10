@@ -250,7 +250,8 @@
   .navigation__logo {
     justify-content: center;
     order: 2;
-    width: 305px;
+    // width: 305px;
+    width: 26.5%;
     padding-top: 8px;
     padding-right: 46px;
     padding-bottom: 7px;
@@ -263,7 +264,8 @@
     @include border(bottom);
 
     order: 1;
-    width: 445px;
+    // width: 445px;
+    width: 38.7%;
     margin-left: 0;
     padding-left: 50px;
 
@@ -272,7 +274,8 @@
 
   .navigation__wrapper-interactive {
     order: 3;
-    width: 400px;
+    // width: 400px;
+    width: 34.8%;
     padding-right: 50px;
   }
 
