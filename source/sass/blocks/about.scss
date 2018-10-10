@@ -90,9 +90,10 @@
   margin-left: 3px;
 }
 
-// TABLET
+// ---------- TABLET ----------
 
 @media (min-width: $tablet-width) {
+
   // Общие стили блока
 
   .about {
@@ -131,5 +132,35 @@
 
     font-size: 20px;
     line-height: 22px;
+  }
+}
+
+// ---------- DESKTOP ----------
+
+@media (min-width: $desktop-width) {
+
+  // Общие стили блока
+
+  .about {
+    width: 700px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+
+    padding-top: 59px;
+    padding-bottom: 61px;
+  }
+
+  // Заголовок
+
+  .about__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  // Элемент преимущества
+
+  .about__item {
+    margin-bottom: 57px;
   }
 }
