@@ -31,13 +31,7 @@
   font-weight: bold;
   text-align: center;
 
-  &--main {
-    color: #010000;
-  }
-
-  &--form {
-    color: #231f20;
-  }
+  color: #000000;
 }
 
 .hero__title--inner-page {
@@ -236,15 +230,12 @@
     height: 34px;
   }
 
-  // Стили для внутренних страц
+  //Стили для внутренних страц
 
-  // .hero--inner-page {
-  //   position: relative;
-  //   padding-top: 34px;
-  //   padding-bottom: 78px;
-
-  //   background-color: #f1f1f1;
-  // }
+  .hero--inner-page {
+    padding-top: 32px;
+    padding-bottom: 102px;
+  }
 
   // Заголовок
 
@@ -255,9 +246,9 @@
     line-height: 57px;
   }
 
-  // .hero__title--inner-page {
-  //   margin-bottom: 0;
-  // }
+  .hero__title--inner-page {
+    margin-bottom: 0;
+  }
 
   // Ссылка-блок
 
