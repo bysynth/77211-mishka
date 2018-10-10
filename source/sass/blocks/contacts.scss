@@ -81,7 +81,7 @@
   margin: 0 auto;
 }
 
-// TABLET
+// ---------- TABLET ----------
 
 @media (min-width: $tablet-width) {
   // Общие стили блока
@@ -153,5 +153,65 @@
 
   .contacts__write-us {
     width: 231px;
+  }
+}
+
+// ---------- DESKTOP ----------
+
+@media (min-width: $desktop-width) {
+  // Общие стили блока
+
+  .contacts {
+    position: relative;
+    padding-bottom: 105px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  // Блок с контактными данными
+
+  .contacts__info {
+    margin-left: 175px;
+    padding-left: 0;
+    padding-top: 141px;
+    padding-bottom: 49px;
+  }
+
+  // Заголовок
+
+  .contacts__title {
+    margin-bottom: 49px;
+    margin-left: -5px;
+
+    font-size: 53px;
+    line-height: 57px;
+
+    &::after {
+      top: -8px;
+      left: -106px;
+    }
+  }
+
+  // Обертка контактных данных
+
+  .contacts__data {
+    flex-direction: column;
+  }
+
+  // Карта
+
+  .contacts__map {
+    position: absolute;
+    top: 71px;
+    right: 0;
+    margin: 0;
+  }
+
+  // Кнопка
+
+  .contacts__write-us {
+    width: 231px;
+    margin: 0;
+    margin-left: 175px;
   }
 }
