@@ -171,10 +171,10 @@
 // ---------- DESKTOP ----------
 
 @media (min-width: $desktop-width) {
-  .featured {
-    width: 1150px;
-    margin: 0 auto;
-  }
+  // .featured {
+  //   width: 1150px;
+  //   margin: 0 auto;
+  // }
 
   // Svg полоса внизу блока
   .featured::after {
