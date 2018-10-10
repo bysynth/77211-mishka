@@ -15,6 +15,7 @@
       <div class="navigation__logo">
         <a class="navigation__logo-link" href="index.html">
           <picture class="navigation__logo-picture">
+            <source srcset="img/logo-desktop.svg" media="(min-width: 1150px)">
             <source srcset="img/logo-tablet.svg" media="(min-width: 768px)">
             <img class="navigation__logo-image" src="img/logo-mobile.svg" alt="Мишка логотип">
           </picture>
@@ -25,11 +26,11 @@
       </div>
       <div class="navigation__wrapper-top">
         <ul class="navigation__list">
-          <li class="navigation__item">
+          <li class="navigation__item navigation__item--top-first">
             <a class="navigation__link navigation__link--top" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link navigation__link--top" href="form.html">Вязание на заказ</a>
+          <li class="navigation__item navigation__item--top-second">
+            <a class="navigation__link navigation__link--top navigation__link--top-second" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
       </div>
@@ -53,19 +54,20 @@
           </li>
         </ul>
       </div>
+      <div class="navigation__wrapper-promo">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--promo" href="#">Новые поступления</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--promo" href="#">Распродажа</a>
+          </li>
+        </ul>
+      </div>
       <p class="navigation__delivery">Бесплатная доставка по России</p>
     </nav>
-    <!-- <ul class="promo-links header__promo-links">
-      <li class="promo-links__item">
-        <a class="promo-links__link" href="#">Новые поступления</a>
-      </li>
-      <li class="promo-links__item">
-        <a class="promo-links__link" href="#">Распродажа</a>
-      </li>
-    </ul>
-    <p class="delivery header__delivery">Бесплатная доставка по России</p> -->
     <section class="hero hero--inner-page">
-      <h1 class="hero__title hero__title--inner-page hero__title--form">Вязание на заказ</h1>
+      <h1 class="hero__title hero__title--inner-page">Вязание на заказ</h1>
     </section>
   </header>
 
@@ -122,9 +124,9 @@
             </ul>
           </div>
         </fieldset>
-        <fieldset class="form__fieldset form__fieldset--fio">
+        <fieldset class="form__fieldset form__fieldset--full-name">
           <div class="form__fieldset-wrapper">
-            <legend class="form__legend form__legend--fio">Фио</legend>
+            <legend class="form__legend form__legend--full-name">Фио</legend>
             <div class="form__field-wrapper">
               <p class="form__field">
                 <label class="form__label form__label--name" for="name-field">Имя:</label>
