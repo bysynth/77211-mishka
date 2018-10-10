@@ -23,7 +23,7 @@
     padding-bottom: 21px;
   }
 
-  &--fio {
+  &--full-name {
     padding-bottom: 21px;
   }
 
@@ -64,7 +64,7 @@
     margin-bottom: 25px;
   }
 
-  &--fio {
+  &--full-name {
     margin-bottom: 29px;
   }
 
@@ -346,11 +346,6 @@
     &--dop {
       padding-bottom: 52px;
     }
-
-    // &--last {
-    //   margin-bottom: 7px;
-    //   padding-bottom: 0;
-    // }
   }
 
   // Обертка для содержимого филдсета
@@ -411,6 +406,10 @@
   }
 
   // Радио
+
+  .form__label--radio {
+    width: 350px;
+  }
 
   .form__label--radio::before {
     width: 48px;
@@ -505,6 +504,7 @@
 
   .form__button-wrapper {
     @include layout-padding($tablet-padding);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -514,7 +514,121 @@
 
   .form__text {
     order: 2;
+    margin-bottom: 0;
 
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  // Кнопка
+
+  .form__send {
+    width: 230px;
+  }
+}
+
+// ---------- DESKTOP ----------
+
+@media (min-width: $desktop-width) {
+  // Отступ снизу
+
+  .form {
+    padding-bottom: 51px;
+  }
+
+  // Филдсеты
+
+  .form__fieldset {
+    &--color {
+      padding-top: 49px;
+    }
+
+    &--dop {
+      padding-bottom: 49px;
+    }
+  }
+
+  // Легенда
+
+  .form__legend {
+    width: 175px;
+    padding-left: 62px;
+  }
+
+  .form__legend--email {
+    padding-top: 2px;
+  }
+
+  // Лабелы
+
+  .form__label--radio:hover::before,
+  .form__label--radio:focus::before {
+    box-shadow: 0 0 0 2px #62d1ba;
+  }
+
+  .form__label--radio:active::before {
+    box-shadow: 0 0 0 2px rgba($color: $secondary-text, $alpha: 0.3);
+  }
+
+  // Чекбокс
+
+  .form__label--checkbox {
+    width: 262px;
+  }
+
+  .form__label--checkbox:hover::before,
+  .form__label--checkbox:focus::before {
+    border-color: #62d1ba;
+  }
+
+  .form__label--checkbox:active::before {
+    border-color: rgba($color: $secondary-text, $alpha: 0.3);
+  }
+
+  // Поля для ФИО
+
+  .form__field-wrapper {
+    width: 700px;
+  }
+
+
+  .form__input-wrapper {
+    width: 700px;
+  }
+
+  // Иконки в инпутах
+
+  .form__icon {
+    top: 11px;
+
+    &--tel {
+      right: 8px;
+    }
+
+    &--email {
+      right: 4px;
+    }
+  }
+
+  //Текстарея
+
+  .form__input--textarea {
+    width: 700px;
+    padding-top: 13px;
+  }
+
+  // Обертка для кнопки и текста
+
+  .form__button-wrapper {
+    width: 700px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  // Текст
+
+  .form__text {
+    order: 2;
     margin-bottom: 0;
 
     font-size: 17px;
