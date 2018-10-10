@@ -58,7 +58,7 @@
   fill: #63d1bb;
 }
 
-// TABLET
+// ---------- TABLET ----------
 
 @media (min-width: $tablet-width) {
   // Общие стили блока
@@ -76,8 +76,9 @@
 
   .footer__logo {
     display: block;
-    line-height: 1;
     margin-right: 92px;
+
+    line-height: 1;
   }
 
   // Элемент социальных кнопок
@@ -90,8 +91,20 @@
 
   .footer__copyright {
     @include padding-clean;
+
     justify-content: flex-end;
     width: 200px;
   }
+}
 
+// ---------- DESKTOP ----------
+
+@media (min-width: $desktop-width) {
+  .footer__logo:hover .footer__logo-image path {
+    fill: #46c1ae;
+  }
+
+  .footer__logo:active .footer__logo-image {
+    opacity: 0.3;
+  }
 }
