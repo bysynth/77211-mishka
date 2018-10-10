@@ -15,6 +15,7 @@
       <div class="navigation__logo">
         <a class="navigation__logo-link" href="index.html">
           <picture class="navigation__logo-picture">
+            <source srcset="img/logo-desktop.svg" media="(min-width: 1150px)">
             <source srcset="img/logo-tablet.svg" media="(min-width: 768px)">
             <img class="navigation__logo-image" src="img/logo-mobile.svg" alt="Мишка логотип">
           </picture>
@@ -25,11 +26,11 @@
       </div>
       <div class="navigation__wrapper-top">
         <ul class="navigation__list">
-          <li class="navigation__item">
+          <li class="navigation__item navigation__item--top-first">
             <a class="navigation__link navigation__link--top" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link navigation__link--top" href="form.html">Вязание на заказ</a>
+          <li class="navigation__item navigation__item--top-second">
+            <a class="navigation__link navigation__link--top navigation__link--top-second" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
       </div>
@@ -53,17 +54,18 @@
           </li>
         </ul>
       </div>
+      <div class="navigation__wrapper-promo">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--promo" href="#">Новые поступления</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--promo" href="#">Распродажа</a>
+          </li>
+        </ul>
+      </div>
       <p class="navigation__delivery">Бесплатная доставка по России</p>
     </nav>
-    <!-- <ul class="promo-links header__promo-links">
-      <li class="promo-links__item">
-        <a class="promo-links__link" href="#">Новые поступления</a>
-      </li>
-      <li class="promo-links__item">
-        <a class="promo-links__link" href="#">Распродажа</a>
-      </li>
-    </ul>
-    <p class="delivery header__delivery">Бесплатная доставка по России</p> -->
     <section class="hero hero--inner-page">
       <h1 class="hero__title hero__title--inner-page">Каталог товаров</h1>
     </section>
@@ -76,6 +78,7 @@
         <li class="product catalog__item">
           <a class="product__link" href="#">
             <picture class="product__picture">
+              <source srcset="img/photo-hare-desktop@1x.jpg" media="(min-width: 1150px)">
               <source srcset="img/photo-hare-tablet@1x.jpg" media="(min-width: 768px)">
               <img class="product__image" src="img/photo-hare-mobile@1x.jpg" alt="Зайчик-попрыгайчик">
             </picture>
@@ -101,13 +104,14 @@
         <li class="product catalog__item">
           <a class="product__link" href="#">
             <picture class="product__picture">
+              <source srcset="img/photo-bowl-desktop@1x.jpg" media="(min-width: 1150px)">
               <source srcset="img/photo-bowl-tablet@1x.jpg" media="(min-width: 768px)">
               <img class="product__image" src="img/photo-bowl-mobile@1x.jpg" alt="Корзинка для белья">
             </picture>
           </a>
           <div class="product__wrapper">
             <div class="product__info">
-              <h3 class="product__title title-small">
+              <h3 class="product__title">
                 <a class="product__link" href="#">Корзинка для белья</a>
               </h3>
               <p class="product__description">Диаметр 15 см, высота 10 см</p>
@@ -126,13 +130,14 @@
         <li class="product catalog__item">
           <a class="product__link" href="#">
             <picture class="product__picture">
+              <source srcset="img/photo-toys-desktop@1x.jpg" media="(min-width: 1150px)">
               <source srcset="img/photo-toys-tablet@1x.jpg" media="(min-width: 768px)">
               <img class="product__image" src="img/photo-toys-mobile@1x.jpg" alt="Большая корзинка для игрушек">
             </picture>
           </a>
           <div class="product__wrapper">
             <div class="product__info">
-              <h3 class="product__title title-small">
+              <h3 class="product__title">
                 <a class="product__link" href="#">Большая корзинка для игрушек</a>
               </h3>
               <p class="product__description">Диаметр 30 см, высота 30 см</p>
@@ -161,6 +166,7 @@
       </div>
       <div class="video__player">
         <picture class="video__picture">
+          <source srcset="img/video-desktop@1x.jpg" media="(min-width: 1150px)">
           <source srcset="img/video-tablet@1x.jpg" media="(min-width: 768px)">
           <img class="video__screenshot" src="img/video-mobile@1x.jpg" alt="Видео процесса производства">
         </picture>
