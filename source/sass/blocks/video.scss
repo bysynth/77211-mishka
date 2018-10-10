@@ -109,9 +109,9 @@
   // Заголовок блока
 
   .video__title {
-    order: 2;
     justify-content: flex-start;
     align-items: center;
+    order: 2;
     padding-top: 25px;
     padding-right: 20px;
     padding-bottom: 23px;
@@ -148,5 +148,65 @@
 
     font-size: 15px;
     line-height: 30px;
+  }
+}
+
+// ---------- DESKTOP ----------
+
+@media (min-width: $desktop-width) {
+  // Общие стили блока и тень
+
+  .video {
+    position: relative;
+
+    align-items: flex-end;
+    padding-top: 25px;
+    padding-bottom: 61px;
+  }
+
+  // Заголовок блока
+
+  .video__title {
+    flex-direction: column;
+    // justify-content: flex-start;
+    align-items: flex-start;
+    width: 350px;
+    padding-top: 16px;
+    padding-right: 50px;
+    padding-bottom: 23px;
+    padding-left: 53px;
+  }
+
+  .video__title-icon {
+    margin: 0;
+    margin-bottom: 22px;
+  }
+
+  .video__title-text {
+    font-size: 20px;
+    padding-left: 8px;
+  }
+
+  // Видео-плеер картинка
+
+  .video__player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    // display: none;
+  }
+
+  // Описание
+
+  .video__description {
+    order: 3;
+    width: 350px;
+    padding-top: 10px;
+    padding-right: 57px;
+    padding-left: 61px;
+  }
+
+  .video__text {
+    margin-bottom: 46px;
   }
 }
