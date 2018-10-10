@@ -97,7 +97,7 @@
   border-right: none;
 }
 
-// TABLET
+// ---------- DESKTOP ----------
 
 @media (min-width: $tablet-width) {
   // Фон блока
@@ -203,6 +203,58 @@
   .reviews__write {
     order: 2;
     align-self: flex-start;
+    width: 175px;
+  }
+}
+
+// ---------- DESKTOP ----------
+
+@media (min-width: $desktop-width) {
+
+  .reviews {
+    // width: 1150px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  // Svg полоса внизу блока
+
+  .reviews::after {
+    width: auto;
+    height: 23px;
+
+    background-size: auto 23px;
+  }
+
+  // Обертка для контента блока
+
+  .reviews__content {
+    padding-top: 71px;
+    padding-bottom: 133px;
+    padding-right: 0;
+    margin-left: 125px;
+  }
+
+  // Заголовок
+
+  .reviews__title {
+    font-size: 53px;
+    line-height: 57px;
+
+    margin-bottom: 48px;
+  }
+
+  // Текст отзыва
+
+  .reviews__text {
+    margin-bottom: 38px;
+    padding-right: 100px;
+  }
+
+  // Кнопка
+
+  .reviews__write {
+    margin-top: 8px;
     width: 175px;
   }
 }
