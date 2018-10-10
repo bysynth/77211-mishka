@@ -15,6 +15,7 @@
       <div class="navigation__logo">
         <a class="navigation__logo-link">
           <picture class="navigation__logo-picture">
+            <source srcset="img/logo-desktop.svg" media="(min-width: 1150px)">
             <source srcset="img/logo-tablet.svg" media="(min-width: 768px)">
             <img class="navigation__logo-image" src="img/logo-mobile.svg" alt="Мишка логотип">
           </picture>
@@ -25,11 +26,11 @@
       </div>
       <div class="navigation__wrapper-top">
         <ul class="navigation__list">
-          <li class="navigation__item">
+          <li class="navigation__item navigation__item--top-first">
             <a class="navigation__link navigation__link--top" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link navigation__link--top" href="form.html">Вязание на заказ</a>
+          <li class="navigation__item navigation__item--top-second">
+            <a class="navigation__link navigation__link--top navigation__link--top-second" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
       </div>
@@ -53,16 +54,18 @@
           </li>
         </ul>
       </div>
+      <div class="navigation__wrapper-promo">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--promo" href="#">Новые поступления</a>
+          </li>
+          <li class="navigation__item">
+            <a class="navigation__link navigation__link--promo" href="#">Распродажа</a>
+          </li>
+        </ul>
+      </div>
       <p class="navigation__delivery">Бесплатная доставка по России</p>
     </nav>
-    <!-- <ul class="promo-links header__promo-links">
-      <li class="promo-links__item">
-        <a class="promo-links__link" href="#">Новые поступления</a>
-      </li>
-      <li class="promo-links__item">
-        <a class="promo-links__link" href="#">Распродажа</a>
-      </li>
-    </ul> -->
     <section class="hero hero--main-page">
       <h1 class="hero__title hero__title--main">Милые штуки ручной<br> работы для дома</h1>
       <ul class="hero__list">
@@ -117,6 +120,7 @@
           </table>
         </div>
         <picture class="featured__picture">
+          <source srcset="img/triple-set-desktop@1x.jpg" media="(min-width: 1150px)">
           <source srcset="img/triple-set-tablet@1x.jpg" media="(min-width: 768px)">
           <img class="featured__image" src="img/triple-set-mobile@1x.jpg" alt="Вязанные корзинки">
         </picture>
@@ -226,6 +230,7 @@
       </div>
       <div class="contacts__map">
         <picture class="contacts__map-picture">
+          <source srcset="img/map-desktop@1x.jpg" media="(min-width: 1150px)">
           <source srcset="img/map-tablet@1x.jpg" media="(min-width: 768px)">
           <img class="contacts__map-image" src="img/map-mobile@1x.jpg" alt="Наш адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
         </picture>
