@@ -1,77 +1,166 @@
-.about {
-  @include layout-padding;
+// Общие стили блока
 
-  margin-bottom: 30px;
+.about {
+  @include layout-padding($mobile-padding);
+
+  padding-top: 27px;
+  padding-bottom: 10px;
 }
+
+// Заголовок
 
 .about__title {
   @include margin-clean;
+  @include title;
 
-  margin-bottom: 25px;
+  margin-bottom: 32px;
 }
+
+// Списки преимуществ
+
+// .about__wrapper {
+//   display: flex;
+// }
 
 .about__list {
   @include list-style-clean;
 
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  margin-bottom: 29px;
 }
 
-.about__item {
-  position: relative;
+// Элемент преимущества
 
-  margin-bottom: 25px;
-  padding-top: 50px;
+.about__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 29px;
 
   font-size: 17px;
   line-height: 20px;
   font-weight: bold;
+  color: $primary-text;
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 30px;
-    top: 0;
-    left: 0;
-    background-repeat: no-repeat;
-    background-position: 0 0;
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
-.about__item--icon-flower {
-  &::before {
-    background-image: url("https://placehold.it/50x30");
+// Общий стиль для иконок
+
+.about__icon {
+  display: block;
+
+  & path {
+    fill: #63d1bb;
   }
 }
 
-.about__item--icon-rubl {
-  &::before {
-    background-image: url("https://placehold.it/50x30");
+// Стили иконок
+
+.about__icon--flower {
+  margin-bottom: 18px;
+  margin-left: 8px;
+}
+
+.about__icon--money {
+  margin-bottom: 26px;
+}
+
+.about__icon--heart {
+  margin-top: 6px;
+  margin-bottom: 21px;
+  margin-left: 7px;
+}
+
+.about__icon--ball {
+  margin-top: 3px;
+  margin-bottom: 17px;
+  margin-left: 3px;
+}
+
+.about__icon--rocket {
+  margin-top: 4px;
+  margin-bottom: 27px;
+  margin-left: -6px;
+}
+
+.about__icon--gift {
+  margin-top: 2px;
+  margin-bottom: 20px;
+  margin-left: 3px;
+}
+
+// ---------- TABLET ----------
+
+@media (min-width: $tablet-width) {
+
+  // Общие стили блока
+
+  .about {
+    @include layout-padding($tablet-padding);
+
+    padding-top: 48px;
+    padding-bottom: 53px;
+  }
+
+  // Заголовок
+
+  .about__title {
+    margin-bottom: 48px;
+    margin-left: -4px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  // Списки преимуществ
+
+  .about__wrapper {
+    display: flex;
+  }
+
+  .about__list {
+    @include list-style-clean;
+
+    width: 50%;
+    margin-bottom: 29px;
+  }
+
+  // Элемент преимущества
+
+  .about__item {
+    margin-bottom: 58px;
+
+    font-size: 20px;
+    line-height: 22px;
   }
 }
 
-.about__item--icon-heart {
-  &::before {
-    background-image: url("https://placehold.it/50x30");
-  }
-}
+// ---------- DESKTOP ----------
 
-.about__item--icon-tangle {
-  &::before {
-    background-image: url("https://placehold.it/50x30");
-  }
-}
+@media (min-width: $desktop-width) {
 
-.about__item--icon-rocket {
-  &::before {
-    background-image: url("https://placehold.it/50x30");
-  }
-}
+  // Общие стили блока
 
-.about__item--icon-gift {
-  &::before {
-    background-image: url("https://placehold.it/50x30");
+  .about {
+    width: 700px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+
+    padding-top: 59px;
+    padding-bottom: 61px;
+  }
+
+  // Заголовок
+
+  .about__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  // Элемент преимущества
+
+  .about__item {
+    margin-bottom: 57px;
   }
 }

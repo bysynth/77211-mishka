@@ -2,23 +2,14 @@
   display: block;
 }
 
-.main--form {
-  @include layout-padding;
+.main--catalog {
+  padding-bottom: 63px;
 }
 
-.main__text {
-  @include margin-clean;
+// ---------- DESKTOP ----------
 
-  margin-bottom: 20px;
-
-  font-size: 13px;
-  line-height: 24px;
-}
-
-.main__catalog {
-  @include layout-padding;
-}
-
-.main__video {
-  margin-bottom: 58px;
+@media (min-width: $desktop-width) {
+  .main--catalog {
+    padding-bottom: 103px;
+  }
 }

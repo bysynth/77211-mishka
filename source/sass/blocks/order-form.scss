@@ -1,0 +1,49 @@
+.order-form {
+  @include layout-padding($mobile-padding);
+
+  padding-top: 23px;
+}
+
+.order-form__text {
+  @include margin-clean;
+
+  margin-bottom: 24px;
+
+  font-size: 13px;
+  line-height: 24px;
+}
+
+// ---------- TABLET ----------
+
+@media (min-width: $tablet-width) {
+  .order-form {
+    @include padding-clean;
+
+    padding-top: 74px;
+  }
+
+  .order-form__text {
+    @include layout-padding($tablet-padding);
+
+    margin-bottom: 8px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+// ---------- DESKTOP ----------
+
+@media (min-width: $desktop-width) {
+  .order-form {
+    padding-top: 123px;
+  }
+
+  .order-form__text {
+    width: 700px;
+    margin-right: auto;
+    margin-bottom: 8px;
+    margin-left: auto;
+    padding: 0;
+  }
+}

@@ -1,3 +1,5 @@
+// Тень карточки товара
+
 .product {
   &:hover {
     box-shadow: 0 6px 10px 0 rgba($color: $primary-text, $alpha: 0.1);
@@ -8,30 +10,38 @@
   }
 }
 
+// Обертка описания товара с ценой
+
 .product__wrapper {
   padding-right: 27px;
-  padding-bottom: 25px;
+  padding-bottom: 27px;
   padding-left: 27px;
 
   border: 1px solid #ececec;
 }
 
-.product__info {
-  @include border-bottom;
+// Обертка для названи я описания
 
-  padding-top: 25px;
-  padding-bottom: 25px;
+.product__info {
+  @include border(bottom);
+
+  padding-top: 26px;
+  padding-bottom: 19px;
 }
+
+// Название товара
 
 .product__title {
   @include margin-clean;
 
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
 }
+
+// Ссылка-название
 
 .product__link {
   color: $primary-text;
@@ -46,17 +56,24 @@
   }
 }
 
+// Описание товара
+
 .product__description {
   @include margin-clean;
 
   font-size: 13px;
 }
 
+// Обертка для цены и кнопки
+
 .product__buy {
   display: flex;
   justify-content: space-between;
-  padding-top: 25px;
+  align-items: center;
+  padding-top: 21px;
 }
+
+// Цена
 
 .product__price {
   @include margin-clean;
@@ -66,13 +83,137 @@
   color: $primary-text;
 }
 
+// Кнопка "В корзину"
+
 .product__order {
   @include padding-clean;
 
-  width: 20px;
-  height: 19px;
+  width: 21px;
+  height: 18px;
 
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  &:hover .product__order-icon {
+    opacity: 1;
+  }
+
+  &:hover .product__order-icon path {
+    fill: #63d1bb;
+  }
+
+  &:active .product__order-icon {
+    opacity: 0.3;
+  }
+}
+
+// Иконка кнопки
+
+.product__order-icon {
+  opacity: 0.2;
+}
+
+// ---------- TABLET ----------
+
+@media (min-width: $tablet-width) {
+  // Изменение раскладки блока
+
+  .product {
+    display: flex;
+    width: 100%;
+  }
+
+  // Картинка
+
+  .product__picture {
+    width: 50%;
+  }
+
+  // Обертка описания товара с ценой
+
+  .product__wrapper {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    width: 50%;
+    padding-right: 26px;
+    padding-bottom: 26px;
+    padding-left: 26px;
+  }
+
+  // Обертка для названи я описания
+
+  .product__info {
+    @include border(bottom);
+
+    flex-grow: 1;
+    padding-top: 25px;
+    padding-bottom: 19px;
+  }
+
+  // Название товара
+
+  .product__title {
+    width: 230px;
+    margin-bottom: 5px;
+
+    font-size: 20px;
+  }
+
+
+  // Описание товара
+
+  .product__description {
+    font-size: 15px;
+  }
+
+  // Обертка для цены и кнопки
+
+  .product__buy {
+    padding-top: 22px;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  // Цена
+
+  .product__price {
+    font-size: 17px;
+  }
+
+  // Иконка кнопки
+
+  .product__order {
+    margin-bottom: 4px;
+  }
+}
+
+// ---------- DESKTOP ----------
+
+@media (min-width: $desktop-width) {
+  // Изменение раскладки блока
+
+  .product {
+    flex-direction: column;
+    width: 316px;
+  }
+
+  // Обертка описания товара с ценой
+
+  .product__wrapper {
+    width: 100%;
+  }
+
+  // Обертка для названи я описания
+
+  .product__info {
+    padding-bottom: 14px;
+  }
+
+  // Обертка для цены и кнопки
+
+  .product__buy {
+    padding-left: 0;
+  }
 }

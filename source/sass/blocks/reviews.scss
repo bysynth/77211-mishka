@@ -1,77 +1,259 @@
-.reviews {
-  margin-bottom: 33px;
+// Svg полоса внизу блока
 
-  &::after {
-    content: "";
-    display: block;
-    width: 100%;
-    margin-top: 42px;
-    height: 6px;
-    background-image: url("../img/bg-zigzag-line.svg");
-    background-repeat: repeat-x;
-    background-position: 0 0;
-    background-size: contain;
-  }
+.reviews::after {
+  content: "";
+
+  display: block;
+  width: 100%;
+  height: 6px;
+
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-repeat: repeat-x;
+  background-position: 50% 0;
+  background-size: contain;
 }
+
+// Обертка для контента блока
+
+.reviews__content {
+  @include layout-padding($mobile-padding);
+
+  padding-top: 16px;
+  padding-bottom: 45px;
+}
+
+// Заголовок
 
 .reviews__title {
   @include margin-clean;
-  @include layout-padding;
+  @include title;
 
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
-.reviews__list {
-  @include layout-padding;
-
-  margin-bottom: 40px;
-}
-
-.reviews__item {
-  @include margin-clean;
-
-  margin-bottom: 20px;
-}
+// Текст отзыва
 
 .reviews__text {
   @include margin-clean;
 
-  margin-bottom: 30px;
+  margin-bottom: 27px;
+}
+
+// Автор
+
+.reviews__author {
+  margin-bottom: 29px;
 }
 
 .reviews__author-name {
+  @include margin-clean;
+
+  margin-bottom: 3px;
+
   font-size: 17px;
   line-height: 24px;
   font-weight: bold;
-  font-style: normal;
 }
 
 .reviews__author-link {
-  font-weight: normal;
+  display: block;
+
+  font-size: 17px;
   line-height: 30px;
+  font-weight: normal;
   color: $primary-text;
 }
+
+// Переключатели отзывов
 
 .reviews__toggles {
   @include margin-clean;
 
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 38px;
 }
 
 .reviews__toggle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 130px;
-  height: 50px;
+  height: 52px;
   padding: 0;
 
   background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   border: 1px solid #ececec;
   cursor: pointer;
 }
 
+.reviews__toggle--left {
+  background-image: url("../img/icon-left-arrow.svg");
+}
+
+.reviews__toggle--right {
+  background-image: url("../img/icon-right-arrow.svg");
+}
+
 .reviews__toggle:first-child {
   border-right: none;
+}
+
+// ---------- DESKTOP ----------
+
+@media (min-width: $tablet-width) {
+  // Фон блока
+
+  .reviews {
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  // Svg полоса внизу блока
+
+  .reviews::after {
+    height: 17px;
+
+    background-size: auto 17px;
+  }
+
+  // Обертка для контента блока
+
+  .reviews__content {
+    @include layout-padding($tablet-padding);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 77px;
+    padding-bottom: 85px;
+  }
+
+  // Заголовок
+
+  .reviews__title {
+    @include margin-clean;
+
+    flex-grow: 1;
+    order: 1;
+    margin-bottom: 49px;
+    margin-left: -5px;
+
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  // Текст отзыва
+
+  .reviews__text {
+    order: 3;
+    margin-bottom: 57px;
+
+    font-size: 17px;
+  }
+
+  // Автор
+
+  .reviews__author {
+    flex-grow: 1;
+    order: 4;
+  }
+
+  .reviews__author-name {
+    margin-bottom: 4px;
+
+    font-size: 18px;
+  }
+
+  .reviews__author-link {
+    width: 300px;
+
+    font-size: 17px;
+    line-height: 30px;
+    font-weight: normal;
+    color: $primary-text;
+  }
+
+  // Переключатели отзывов
+
+  .reviews__toggles {
+    @include margin-clean;
+
+    display: flex;
+    order: 5;
+  }
+
+  .reviews__toggle {
+    width: 88px;
+    height: 55px;
+
+    border: none;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  // Кнопка
+
+  .reviews__write {
+    order: 2;
+    align-self: flex-start;
+    width: 175px;
+  }
+}
+
+// ---------- DESKTOP ----------
+
+@media (min-width: $desktop-width) {
+  .reviews {
+    // width: 1150px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  // Svg полоса внизу блока
+
+  .reviews::after {
+    width: auto;
+    height: 23px;
+
+    background-size: auto 23px;
+  }
+
+  // Обертка для контента блока
+
+  .reviews__content {
+    padding-top: 71px;
+    padding-bottom: 133px;
+    padding-right: 0;
+    margin-left: 125px;
+  }
+
+  // Заголовок
+
+  .reviews__title {
+    font-size: 53px;
+    line-height: 57px;
+
+    margin-bottom: 48px;
+  }
+
+  // Текст отзыва
+
+  .reviews__text {
+    margin-bottom: 38px;
+    padding-right: 100px;
+  }
+
+  // Кнопка
+
+  .reviews__write {
+    margin-top: 8px;
+    width: 175px;
+  }
 }

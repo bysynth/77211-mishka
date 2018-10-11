@@ -4,9 +4,41 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80px;
+  width: 260px;
+  padding-top: 15px;
+  padding-bottom: 16px;
 }
 
-.social__item:not(:last-child) {
-  margin-right: 40px;
+.social__item {
+  &:not(:last-child) {
+    margin-right: 21px;
+  }
+}
+
+.social__link {
+  display: block;
+  padding: 10px;
+
+  &:hover .social__icon path,
+  &:focus .social__icon path {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.social__icon {
+  display: block;
+}
+
+// TABLET
+
+@media (min-width: $tablet-width) {
+  .social {
+    @include padding-clean;
+
+    width: 200px;
+  }
 }

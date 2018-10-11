@@ -1,29 +1,110 @@
+// Общие стили блока
+
 .footer {
-  @include layout-padding;
+  @include layout-padding($mobile-padding);
 
   background-color: #f1f1f1;
 }
+
+// Лого
+
+.footer__logo {
+  display: none;
+}
+
+// Элемент социальных кнопок
 
 .footer__social {
   border-bottom: 1px solid #e5e5e5;
 }
 
+// Элемент копирайта
+
 .footer__copyright {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80px;
+  width: 260px;
+  padding-top: 19px;
+  padding-bottom: 26px;
 }
+
+// Ссылка
 
 .footer__link {
   display: flex;
   align-items: center;
+
   font-size: 19px;
-  font-weight: bold;
   line-height: 18px;
+  font-weight: bold;
   color: $primary-text;
+
+  &:hover .footer__link-icon,
+  &:focus .footer__link-icon {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
+
+// Иконка ссылки
 
 .footer__link-icon {
   margin-left: 30px;
+
+  fill: #63d1bb;
+}
+
+// ---------- TABLET ----------
+
+@media (min-width: $tablet-width) {
+  // Общие стили блока
+
+  .footer {
+    @include layout-padding($tablet-padding);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 143px;
+  }
+
+  // Лого
+
+  .footer__logo {
+    display: block;
+    margin-right: 92px;
+
+    line-height: 1;
+  }
+
+  // Элемент социальных кнопок
+
+  .footer__social {
+    border-bottom: none;
+  }
+
+  // Элемент копирайта
+
+  .footer__copyright {
+    @include padding-clean;
+
+    justify-content: flex-end;
+    width: 200px;
+  }
+}
+
+// ---------- DESKTOP ----------
+
+@media (min-width: $desktop-width) {
+  .footer__logo:hover .footer__logo-image path {
+    fill: #46c1ae;
+  }
+
+  .footer__logo:active .footer__logo-image {
+    opacity: 0.3;
+  }
 }

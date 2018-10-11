@@ -1,6 +1,6 @@
-@mixin layout-padding {
-  padding-left: 30px;
-  padding-right: 30px;
+@mixin layout-padding($size) {
+  padding-left: $size;
+  padding-right: $size;
 }
 
 @mixin list-style-clean {
@@ -10,8 +10,8 @@
   list-style: none;
 }
 
-@mixin border-bottom {
-  border-bottom: 1px solid #ececec;
+@mixin border($side) {
+  border-#{$side}: 1px solid #ececec;
 }
 
 @mixin margin-clean {
@@ -20,4 +20,11 @@
 
 @mixin padding-clean {
   padding: 0;
+}
+
+@mixin title {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  color: $primary-text;
 }
