@@ -1,6 +1,6 @@
 // Общие стили блока
 
-.about {
+.about__wrapper {
   @include layout-padding($mobile-padding);
 
   padding-top: 27px;
@@ -14,13 +14,10 @@
   @include title;
 
   margin-bottom: 32px;
+  letter-spacing: -0.3px; // для Pixel Perfect
 }
 
 // Списки преимуществ
-
-// .about__wrapper {
-//   display: flex;
-// }
 
 .about__list {
   @include list-style-clean;
@@ -93,10 +90,9 @@
 // ---------- TABLET ----------
 
 @media (min-width: $tablet-width) {
-
   // Общие стили блока
 
-  .about {
+  .about__wrapper {
     @include layout-padding($tablet-padding);
 
     padding-top: 48px;
@@ -108,13 +104,14 @@
   .about__title {
     margin-bottom: 48px;
     margin-left: -4px;
+
     font-size: 43px;
     line-height: 50px;
   }
 
   // Списки преимуществ
 
-  .about__wrapper {
+  .about__content {
     display: flex;
   }
 
@@ -138,22 +135,26 @@
 // ---------- DESKTOP ----------
 
 @media (min-width: $desktop-width) {
-
   // Общие стили блока
 
-  .about {
-    width: 700px;
-    margin: 0 auto;
-    padding-left: 0;
-    padding-right: 0;
+  .about__wrapper {
+    @include layout-padding($tablet-padding);
 
     padding-top: 59px;
     padding-bottom: 61px;
   }
 
+  // Контент
+
+  .about__content {
+    width: 700px;
+    margin: 0 auto;
+  }
+
   // Заголовок
 
   .about__title {
+    margin-left: 171px;
     font-size: 53px;
     line-height: 57px;
   }
