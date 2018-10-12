@@ -101,7 +101,7 @@
 // ---------- DESKTOP ----------
 
 @media (min-width: $desktop-width) {
-  .footer__logo:hover .footer__logo-image path {
+  .footer__logo[href]:hover .footer__logo-image path {
     fill: #46c1ae;
   }
 
