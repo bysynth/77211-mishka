@@ -34,7 +34,7 @@
 
   margin-bottom: 5px;
 
-  letter-spacing: -0.5px; // Проблема с заголовком !!! Сделать Pixer Perfect не получается.
+  letter-spacing: 0.1px; // Для Pixel Perfect
 }
 
 .featured__marker {
@@ -210,7 +210,6 @@
 
     font-size: 53px;
     line-height: 57px;
-    letter-spacing: -2.3px; // Проблема с заголовком !!! Сделать Pixer Perfect не получается.
   }
 
   .featured__marker {
