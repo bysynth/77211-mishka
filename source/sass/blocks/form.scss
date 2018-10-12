@@ -162,6 +162,15 @@
   margin-top: 2px;
 }
 
+.form__label--radio:hover::before,
+.form__input-radio:focus + .form__label--radio::before {
+  box-shadow: 0 0 0 2px #62d1ba;
+}
+
+.form__label--radio:active::before {
+  box-shadow: 0 0 0 2px rgba($color: $secondary-text, $alpha: 0.3);
+}
+
 // Чекбокс
 
 .form__label--checkbox::before {
@@ -178,6 +187,15 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 22px 16px;
+}
+
+.form__label--checkbox:hover::before,
+.form__input-checkbox:focus + .form__label--checkbox::before {
+  border-color: #62d1ba;
+}
+
+.form__label--checkbox:active::before {
+  border-color: rgba($color: $secondary-text, $alpha: 0.3);
 }
 
 // Поля для ФИО
@@ -560,30 +578,10 @@
     padding-top: 2px;
   }
 
-  // Лабелы
-
-  .form__label--radio:hover::before,
-  .form__label--radio:focus::before {
-    box-shadow: 0 0 0 2px #62d1ba;
-  }
-
-  .form__label--radio:active::before {
-    box-shadow: 0 0 0 2px rgba($color: $secondary-text, $alpha: 0.3);
-  }
-
   // Чекбокс
 
   .form__label--checkbox {
     width: 262px;
-  }
-
-  .form__label--checkbox:hover::before,
-  .form__label--checkbox:focus::before {
-    border-color: #62d1ba;
-  }
-
-  .form__label--checkbox:active::before {
-    border-color: rgba($color: $secondary-text, $alpha: 0.3);
   }
 
   // Поля для ФИО
