@@ -8,6 +8,7 @@
 
 .contacts__info {
   @include layout-padding($mobile-padding);
+  @include center(340);
 
   padding-top: 35px;
   padding-bottom: 7px;
@@ -74,6 +75,10 @@
   margin-bottom: 42px;
 }
 
+.contacts__map-image {
+  margin: 0 auto;
+}
+
 // Кнопка
 
 .contacts__write-us {
@@ -94,6 +99,7 @@
 
   .contacts__info {
     @include layout-padding($tablet-padding);
+    @include center(768);
 
     padding-top: 61px;
     padding-bottom: 26px;
@@ -162,20 +168,25 @@
   // Общие стили блока
 
   .contacts {
+    @include center(1050);
+
     position: relative;
+
     padding-bottom: 105px;
-    margin-left: 50px;
-    margin-right: 50px;
+    // margin-left: 50px;
+    // margin-right: 50px;
   }
 
   // Блок с контактными данными
 
   .contacts__info {
     width: 50%;
-    padding-right: 10px;
-    padding-left: 175px;
+    max-width: none;
+    margin: 0;
     padding-top: 141px;
+    padding-right: 10px;
     padding-bottom: 49px;
+    padding-left: 175px;
   }
 
   // Заголовок
@@ -211,6 +222,7 @@
     position: absolute;
     top: 71px;
     right: 0;
+
     margin: 0;
   }
 
