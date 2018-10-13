@@ -371,6 +371,7 @@
 
   .form__fieldset-wrapper {
     @include layout-padding($tablet-padding);
+    @include center(768);
 
     display: flex;
   }
@@ -523,6 +524,7 @@
 
   .form__button-wrapper {
     @include layout-padding($tablet-padding);
+    @include center(768);
 
     display: flex;
     justify-content: space-between;
@@ -565,6 +567,12 @@
     &--dop {
       padding-bottom: 49px;
     }
+  }
+
+  // Обертка для содержимого филдсета
+
+  .form__fieldset-wrapper {
+    @include center(1150);
   }
 
   // Легенда
@@ -620,7 +628,6 @@
 
   .form__button-wrapper {
     width: 700px;
-    margin: 0 auto;
     padding: 0;
   }
 
