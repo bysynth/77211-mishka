@@ -17,6 +17,7 @@
 
 .featured__content {
   @include layout-padding($mobile-padding);
+  @include center(400);
 
   padding-top: 27px;
   padding-bottom: 36px;
@@ -64,6 +65,10 @@
   margin-bottom: 24px;
 }
 
+.featured__image {
+  margin: 0 auto;
+}
+
 // Блок цены
 
 .featured__price {
@@ -92,6 +97,7 @@
 
   .featured__content {
     @include layout-padding($tablet-padding);
+    @include center(768);
 
     position: relative;
 
@@ -171,12 +177,9 @@
 // ---------- DESKTOP ----------
 
 @media (min-width: $desktop-width) {
-  // .featured {
-  //   width: 1150px;
-  //   margin: 0 auto;
-  // }
 
   // Svg полоса внизу блока
+
   .featured::after {
     margin-left: 50px;
     margin-right: 50px;
@@ -189,6 +192,8 @@
   // Обертка для контента блока
 
   .featured__content {
+    @include center (1150);
+
     padding-top: 126px;
     padding-bottom: 74px;
   }
