@@ -6,6 +6,7 @@
 
 .footer__wrapper {
   @include layout-padding($mobile-padding);
+  @include center(320);
 }
 
 // Лого
@@ -67,6 +68,8 @@
 
   .footer__wrapper {
     @include layout-padding($tablet-padding);
+    @include center(768);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -101,6 +104,10 @@
 // ---------- DESKTOP ----------
 
 @media (min-width: $desktop-width) {
+  .footer__wrapper {
+    @include center(1150);
+  }
+
   .footer__logo[href]:hover .footer__logo-image path {
     fill: #46c1ae;
   }
