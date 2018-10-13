@@ -2,6 +2,7 @@
 
 .about__wrapper {
   @include layout-padding($mobile-padding);
+  @include center(320);
 
   padding-top: 27px;
   padding-bottom: 10px;
@@ -94,6 +95,7 @@
 
   .about__wrapper {
     @include layout-padding($tablet-padding);
+    @include center(768);
 
     padding-top: 48px;
     padding-bottom: 53px;
@@ -139,6 +141,7 @@
 
   .about__wrapper {
     @include layout-padding($tablet-padding);
+    @include center(1150);
 
     padding-top: 59px;
     padding-bottom: 61px;
