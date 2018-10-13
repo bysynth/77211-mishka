@@ -1,9 +1,12 @@
 // Стили блока для главной страницы
 
+.hero {
+  background-color: #f9f9f9;
+}
+
 .hero--main-page {
   padding-top: 71px;
 
-  background-color: #f9f9f9;
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center -17px;
@@ -43,10 +46,6 @@
 .hero__list {
   @include list-style-clean;
 }
-
-// .hero__item {
-
-// }
 
 // Ссылка-блок
 
@@ -115,42 +114,26 @@
   margin-right: 27px;
 }
 
-// TABLET
+// ---------- TABLET ----------
 
 @media (min-width: $tablet-width) {
   // Стили блока для главной страницы
-  .hero--main-page {
-    position: relative;
+  .hero {
+    margin-top: -61px;
+  }
 
-    padding-top: 92px;
+  .hero--main-page {
+    padding-top: 153px;
 
     background-image: url("../img/hero-tablet@1x.jpg");
     background-repeat: no-repeat;
-    background-position: center -62px;
-  }
-
-  .hero--main-page::after,
-  .hero--inner-page::after {
-    content: "";
-    position: absolute;
-    bottom: -14px;
-    left: 0;
-
-    width: 100%;
-    height: 24px;
-
-    background-image: url("../img/bg-zigzag-fill.svg");
-    background-repeat: repeat-x;
-    background-position: 0 0;
-    background-size: contain;
+    background-position: center -1px;
   }
 
   // Стили для внутренних страц
 
   .hero--inner-page {
-    position: relative;
-
-    padding-top: 34px;
+    padding-top: 95px;
     padding-bottom: 78px;
 
     background-color: #f1f1f1;
@@ -216,24 +199,19 @@
 // ---------- DESKTOP ----------
 
 @media (min-width: $desktop-width) {
-  // Стили блока для главной страницы
-  .hero--main-page {
-    padding-top: 92px;
-
-    background-image: url("../img/hero-desktop@1x.jpg");
+  .hero__wrapper {
+    @include center(1150);
   }
 
-  .hero--main-page::after,
-  .hero--inner-page::after {
-    bottom: -19px;
-
-    height: 34px;
+  // Стили блока для главной страницы
+  .hero--main-page {
+    background-image: url("../img/hero-desktop@1x.jpg");
   }
 
   //Стили для внутренних страц
 
   .hero--inner-page {
-    padding-top: 32px;
+    padding-top: 93px;
     padding-bottom: 102px;
   }
 
