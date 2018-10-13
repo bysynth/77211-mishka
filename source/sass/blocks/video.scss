@@ -99,7 +99,7 @@
   // Общие стили блока и тень
 
   .video {
-    @include center(668)
+    @include center(668);
 
     display: flex;
     flex-direction: column;
