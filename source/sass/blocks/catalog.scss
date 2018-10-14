@@ -1,5 +1,6 @@
 .catalog {
   @include layout-padding($mobile-padding);
+  @include center(320);
 
   padding-top: 31px;
 }
@@ -17,6 +18,7 @@
 @media (min-width: $tablet-width) {
   .catalog {
     @include layout-padding($tablet-padding);
+    @include center(768);
 
     padding-top: 81px;
   }
@@ -30,6 +32,8 @@
 
 @media (min-width: $desktop-width) {
   .catalog {
+    @include center(1150);
+
     padding-top: 130px;
   }
 
@@ -39,8 +43,8 @@
   }
 
   .catalog__item {
-    margin-bottom: 57px;
     margin-right: 51px;
+    margin-bottom: 57px;
   }
 
   .catalog__item:nth-child(3n) {

@@ -1,5 +1,6 @@
 .order-form {
   @include layout-padding($mobile-padding);
+  @include center(400);
 
   padding-top: 23px;
 }
@@ -18,12 +19,16 @@
 @media (min-width: $tablet-width) {
   .order-form {
     @include padding-clean;
+    @include margin-clean;
+
+    max-width: none;
 
     padding-top: 74px;
   }
 
   .order-form__text {
     @include layout-padding($tablet-padding);
+    @include center(768);
 
     margin-bottom: 8px;
 
@@ -41,9 +46,7 @@
 
   .order-form__text {
     width: 700px;
-    margin-right: auto;
     margin-bottom: 8px;
-    margin-left: auto;
     padding: 0;
   }
 }

@@ -13,6 +13,7 @@
 // Обертка описания товара с ценой
 
 .product__wrapper {
+  padding-top: 26px;
   padding-right: 27px;
   padding-bottom: 27px;
   padding-left: 27px;
@@ -25,7 +26,6 @@
 .product__info {
   @include border(bottom);
 
-  padding-top: 26px;
   padding-bottom: 19px;
 }
 
@@ -70,7 +70,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 21px;
+  margin-top: 21px;
 }
 
 // Цена
@@ -137,6 +137,7 @@
     flex-grow: 1;
     flex-direction: column;
     width: 50%;
+    padding-top: 25px;
     padding-right: 26px;
     padding-bottom: 26px;
     padding-left: 26px;
@@ -148,7 +149,6 @@
     @include border(bottom);
 
     flex-grow: 1;
-    padding-top: 25px;
     padding-bottom: 19px;
   }
 
@@ -171,7 +171,7 @@
   // Обертка для цены и кнопки
 
   .product__buy {
-    padding-top: 22px;
+    margin-top: 22px;
     padding-right: 5px;
     padding-left: 5px;
   }

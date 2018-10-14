@@ -1,22 +1,23 @@
 // Svg полоса внизу блока
 
 .featured::after {
+  @include center(400);
   content: "";
 
   display: block;
-  width: 100%;
   height: 6px;
 
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
-  background-position: 50% 0;
-  background-size: contain;
+  background-position: 0 0;
+  background-size: auto 6px;
 }
 
 // Обертка для контента блока
 
 .featured__content {
   @include layout-padding($mobile-padding);
+  @include center(400);
 
   padding-top: 27px;
   padding-bottom: 36px;
@@ -34,7 +35,7 @@
 
   margin-bottom: 5px;
 
-  letter-spacing: -0.5px; // Проблема с заголовком !!! Сделать Pixer Perfect не получается.
+  letter-spacing: 0.1px; // Для Pixel Perfect
 }
 
 .featured__marker {
@@ -64,6 +65,10 @@
   margin-bottom: 24px;
 }
 
+.featured__image {
+  margin: 0 auto;
+}
+
 // Блок цены
 
 .featured__price {
@@ -82,7 +87,8 @@
 @media (min-width: $tablet-width) {
   // Svg полоса внизу блока
   .featured::after {
-    width: 100%;
+    @include center(768);
+
     height: 17px;
 
     background-size: auto 17px;
@@ -92,6 +98,7 @@
 
   .featured__content {
     @include layout-padding($tablet-padding);
+    @include center(768);
 
     position: relative;
 
@@ -171,16 +178,12 @@
 // ---------- DESKTOP ----------
 
 @media (min-width: $desktop-width) {
-  // .featured {
-  //   width: 1150px;
-  //   margin: 0 auto;
-  // }
 
   // Svg полоса внизу блока
+
   .featured::after {
-    margin-left: 50px;
-    margin-right: 50px;
-    width: auto;
+    @include center(1050);
+
     height: 23px;
 
     background-size: auto 23px;
@@ -189,6 +192,8 @@
   // Обертка для контента блока
 
   .featured__content {
+    @include center (1150);
+
     padding-top: 126px;
     padding-bottom: 74px;
   }
@@ -210,7 +215,6 @@
 
     font-size: 53px;
     line-height: 57px;
-    letter-spacing: -2.3px; // Проблема с заголовком !!! Сделать Pixer Perfect не получается.
   }
 
   .featured__marker {

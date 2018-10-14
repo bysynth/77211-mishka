@@ -28,3 +28,8 @@
   font-weight: bold;
   color: $primary-text;
 }
+
+@mixin center($width) {
+  max-width: #{$width}px;
+  margin: 0 auto;
+}

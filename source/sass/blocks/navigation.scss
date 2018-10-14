@@ -10,8 +10,6 @@
   justify-content: center;
   padding-top: 21px;
   padding-bottom: 22px;
-
-  background-color: #ffffff;
 }
 
 .navigation__logo-link {
@@ -34,6 +32,8 @@
   padding-left: 41px;
 
   background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
   border: none;
   transform: translateY(-50%);
   cursor: pointer;
@@ -41,25 +41,13 @@
 
 .navigation__logo-toggle--close {
   background-image: url("../img/icon-menu-close.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
 }
 
 .navigation__logo-toggle--open {
   background-image: url("../img/icon-menu-open.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
 }
 
 // Обертки списков навигации
-
-.navigation__wrapper-top {
-  background-color: #ffffff;
-}
-
-.navigation__wrapper-interactive {
-  background-color: #ffffff;
-}
 
 .navigation__wrapper-promo {
   display: none;
@@ -165,7 +153,7 @@
     order: 2;
     margin-left: 32px;
 
-    background-color: transparent;
+    // background-color: transparent;
   }
 
   .navigation__wrapper-interactive {
@@ -241,8 +229,7 @@
 
 @media (min-width: $desktop-width) {
   .navigation {
-    display: flex;
-    flex-wrap: wrap;
+    @include center(1150);
   }
 
   // Блок логотипа
@@ -258,7 +245,7 @@
     padding-left: 0;
   }
 
-  .navigation__logo-link {
+  .navigation__logo-link[href] {
     &:hover,
     &:focus {
       opacity: 0.6;
@@ -275,12 +262,9 @@
     @include border(bottom);
 
     order: 1;
-    // width: 445px;
     width: 38.7%;
     margin-left: 0;
     padding-left: 50px;
-
-    background-color: #ffffff;
   }
 
   .navigation__wrapper-interactive {
@@ -321,8 +305,8 @@
   }
 
   .navigation__item--top-second {
-    padding-left: 35px;
     padding-right: 20px;
+    padding-left: 35px;
   }
 
   .navigation__item--search {
