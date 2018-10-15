@@ -1,7 +1,8 @@
 .page {
-  min-width: 320px;
-
   position: relative;
+
+  min-width: 320px;
+  overflow-x: hidden;
 
   font-family: "Open sans", "Arial", sans-serif;
   font-size: 15px;
