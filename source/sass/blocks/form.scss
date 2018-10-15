@@ -211,6 +211,7 @@
 }
 
 .form__label--name {
+  display: block;
   margin-bottom: 5px;
 
   &::before {
@@ -229,6 +230,7 @@
   z-index: 12;
 
   width: 100%;
+  height: 47px; // IE fix
   padding-top: 11px;
   padding-right: 40px;
   padding-bottom: 16px;
@@ -287,8 +289,21 @@
   color: rgba($color: $secondary-text, $alpha: 0.3);
 }
 
+// Fix для autoprefixer, он самостоятельно не добавляет :-ms-input-placeholder (с одной : )
+
+.form__input:-ms-input-placeholder {
+  font-size: 17px;
+  color: rgba($color: $secondary-text, $alpha: 0.3);
+}
+
 .form__input--tel {
   &::placeholder {
+    font-size: 19px;
+  }
+
+  // Fix для autoprefixer, он самостоятельно не добавляет :-ms-input-placeholder (с одной : )
+
+  &:-ms-input-placeholder {
     font-size: 19px;
   }
 }
@@ -482,6 +497,7 @@
   // Инпуты - ФИО, ТЕЛ, E-MAIL, ДОП
 
   .form__input {
+    height: 52px;
     padding-top: 12px;
     padding-right: 40px;
     padding-bottom: 12px;
@@ -491,6 +507,12 @@
   }
 
   .form__input::placeholder {
+    font-size: 19px;
+  }
+
+  // Fix для autoprefixer, он самостоятельно не добавляет :-ms-input-placeholder (с одной : )
+
+  .form__input:-ms-input-placeholder {
     font-size: 19px;
   }
 
