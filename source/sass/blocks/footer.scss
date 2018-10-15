@@ -85,6 +85,15 @@
     line-height: 1;
   }
 
+  .footer__logo[href]:hover .footer__logo-image path,
+  .footer__logo[href]:focus .footer__logo-image path {
+    fill: #46c1ae;
+  }
+
+  .footer__logo:active .footer__logo-image {
+    opacity: 0.3;
+  }
+
   // Элемент социальных кнопок
 
   .footer__social {
@@ -110,13 +119,5 @@
 
   .footer__wrapper {
     @include center(1150);
-  }
-
-  .footer__logo[href]:hover .footer__logo-image path {
-    fill: #46c1ae;
-  }
-
-  .footer__logo:active .footer__logo-image {
-    opacity: 0.3;
   }
 }
