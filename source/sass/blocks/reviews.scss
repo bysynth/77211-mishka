@@ -6,12 +6,12 @@
   content: "";
 
   display: block;
-  height: 6px;
+  height: 8px;
 
   background-image: url("../img/bg-zigzag-line.svg");
   background-repeat: repeat-x;
-  background-position: 0 0;
-  background-size: auto 6px;
+  background-position: -8px;
+  background-size: 320px 8px;
 }
 
 // Обертка для контента блока
@@ -120,7 +120,8 @@
 
     height: 17px;
 
-    background-size: auto 17px;
+    background-position: -20px;
+    background-size: 770px 17px;
   }
 
   // Обертка для контента блока
@@ -229,7 +230,8 @@
 
     height: 23px;
 
-    background-size: auto 23px;
+    background-position: -26px;
+    background-size: 1050px 23px;
   }
 
   // Обертка для контента блока
