@@ -10,6 +10,11 @@
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center -17px;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+    background-size: 575px auto;
+  }
 }
 
 // Стили для внутренних страц
@@ -128,6 +133,11 @@
     background-image: url("../img/hero-tablet@1x.jpg");
     background-repeat: no-repeat;
     background-position: center -1px;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-tablet@2x.jpg");
+      background-size: 1150px auto;
+    }
   }
 
   // Стили для внутренних страц
@@ -206,6 +216,10 @@
   // Стили блока для главной страницы
   .hero--main-page {
     background-image: url("../img/hero-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-desktop@2x.jpg");
+    }
   }
 
   //Стили для внутренних страц
