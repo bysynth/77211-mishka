@@ -16,6 +16,11 @@
   display: block;
 }
 
+.navigation__logo-image {
+  width: 86px;
+  height: 35px;
+}
+
 // Кнопка отображения меню в mobile версии
 
 .navigation__logo-toggle {
@@ -141,6 +146,11 @@
     border-top: none;
   }
 
+  .navigation__logo-image {
+    width: 113px;
+    height: 46px;
+  }
+
   // Кнопка отображения меню в mobile версии
 
   .navigation__logo-toggle {
@@ -254,6 +264,11 @@
     &:active {
       opacity: 0.3;
     }
+  }
+
+  .navigation__logo-image {
+    width: 149px;
+    height: 72px;
   }
 
   // Обертки списков навигации
