@@ -238,6 +238,9 @@
           <source srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x" media="(min-width: 768px)">
           <img class="contacts__map-image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Наш адрес: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
         </picture>
+        <div class="contacts__map-yandex" id="map">
+          <span class="visually-hidden">Яндекс карта</span>
+        </div>
       </div>
       <a class="button contacts__write-us" href="#">Напишите нам</a>
     </section>
@@ -318,8 +321,9 @@
     <a class="button modal-basket__add" href="#">Добавить</a>
   </section>
 
-  <script src="js/script.js"></script>
   <script src="js/picturefill.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
