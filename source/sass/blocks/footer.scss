@@ -43,14 +43,14 @@
   font-weight: bold;
   color: $primary-text;
 
-  &:hover .footer__link-icon,
-  &:focus .footer__link-icon {
-    fill: #46c1ae;
-  }
-
   &:active {
     opacity: 0.3;
   }
+}
+
+.footer__link:hover .footer__link-icon,
+.footer__link:focus .footer__link-icon {
+  fill: #46c1ae;
 }
 
 // Иконка ссылки
@@ -73,7 +73,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 143px;
+    height: 143px; // for IE
   }
 
   // Лого
@@ -83,6 +83,15 @@
     margin-right: 92px;
 
     line-height: 1;
+  }
+
+  .footer__logo[href]:hover .footer__logo-image,
+  .footer__logo[href]:focus .footer__logo-image {
+    fill: #46c1ae;
+  }
+
+  .footer__logo:active .footer__logo-image {
+    opacity: 0.3;
   }
 
   // Элемент социальных кнопок
@@ -106,13 +115,5 @@
 @media (min-width: $desktop-width) {
   .footer__wrapper {
     @include center(1150);
-  }
-
-  .footer__logo[href]:hover .footer__logo-image path {
-    fill: #46c1ae;
-  }
-
-  .footer__logo:active .footer__logo-image {
-    opacity: 0.3;
   }
 }

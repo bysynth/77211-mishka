@@ -94,24 +94,25 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-
-  &:hover .product__order-icon {
-    opacity: 1;
-  }
-
-  &:hover .product__order-icon path {
-    fill: #63d1bb;
-  }
-
-  &:active .product__order-icon {
-    opacity: 0.3;
-  }
 }
 
 // Иконка кнопки
 
 .product__order-icon {
   opacity: 0.2;
+}
+
+.product__order:hover .product__order-icon,
+.product__order:focus .product__order-icon {
+  opacity: 1;
+
+  fill: #63d1bb;
+}
+
+.product__order:active .product__order-icon {
+  opacity: 0.3;
+
+  fill: #63d1bb;
 }
 
 // ---------- TABLET ----------

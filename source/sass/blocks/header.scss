@@ -18,8 +18,8 @@
 
     background-image: url("../img/bg-zigzag-fill.svg");
     background-repeat: repeat-x;
-    background-position: 0 0;
-    background-size: contain;
+    background-position: 0;
+    background-size: 768px 24px;
   }
 }
 
@@ -27,8 +27,18 @@
 
 @media (min-width: $desktop-width) {
   .header::after {
-    bottom: -19px;
+    bottom: -27px;
 
+    height: 47px;
+    background-position: 12px;
+    background-size: 1250px 43px;
+  }
+
+  .header--inner::after {
+    bottom: -19px;
     height: 34px;
+
+    background-position: 0;
+    background-size: 1150px 34px;
   }
 }

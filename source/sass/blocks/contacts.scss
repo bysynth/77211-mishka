@@ -72,11 +72,41 @@
 // Карта
 
 .contacts__map {
+  position: relative;
   margin-bottom: 42px;
 }
 
-.contacts__map-image {
+.contacts__map-picture {
+  position: relative;
+
+  display: block;
+  width: 320px;
   margin: 0 auto;
+}
+
+.contacts__map-picture::after {
+  content: "";
+  position: absolute;
+  top: 144px;
+  left: 140px;
+
+  width: 67px;
+  height: 100px;
+
+  background-image: url("../img/icon-map-pin.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+// Яндекс карта
+
+.contacts__map-yandex {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 454px;
 }
 
 // Кнопка
@@ -155,6 +185,21 @@
     margin-bottom: 55px;
   }
 
+  .contacts__map-picture {
+    width: 768px;
+  }
+
+  .contacts__map-picture::after {
+    top: 139px;
+    left: 363px;
+  }
+
+  // Яндекс карта
+
+  .contacts__map-yandex {
+    height: 457px;
+  }
+
   // Кнопка
 
   .contacts__write-us {
@@ -173,8 +218,6 @@
     position: relative;
 
     padding-bottom: 105px;
-    // margin-left: 50px;
-    // margin-right: 50px;
   }
 
   // Блок с контактными данными
@@ -224,6 +267,21 @@
     right: 0;
 
     margin: 0;
+  }
+
+  .contacts__map-picture {
+    width: 525px;
+  }
+
+  .contacts__map-picture::after {
+    top: 147px;
+    left: 238px;
+  }
+
+  // Яндекс карта
+
+  .contacts__map-yandex {
+    width: 525px;
   }
 
   // Кнопка

@@ -15,6 +15,7 @@
   @include title;
 
   margin-bottom: 32px;
+
   letter-spacing: -0.3px; // для Pixel Perfect
 }
 
@@ -47,10 +48,10 @@
 
 .about__icon {
   display: block;
+}
 
-  & path {
-    fill: #63d1bb;
-  }
+.about__icon path {
+  fill: #63d1bb;
 }
 
 // Стили иконок
@@ -158,6 +159,7 @@
 
   .about__title {
     margin-left: 171px;
+
     font-size: 53px;
     line-height: 57px;
   }

@@ -31,10 +31,7 @@
 .video__title-icon {
   margin-right: 20px;
   margin-left: 7px;
-
-  & path {
-    fill: #63d1bb;
-  }
+  fill: #63d1bb;
 }
 
 .video__title-text {
@@ -64,16 +61,16 @@
   border: none;
   transform: translate(-50%, -50%);
   cursor: pointer;
+}
 
-  &:hover .video__play-icon,
-  &:focus .video__play-icon {
-    transform: scale(1.2);
-  }
+.video__play-button:hover .video__play-icon,
+.video__play-button:focus .video__play-icon {
+  transform: scale(1.2);
+}
 
-  &:active .video__play-icon {
-    transform: scale(0.8);
-    opacity: 0.3;
-  }
+.video__play-button:active .video__play-icon {
+  transform: scale(0.8);
+  opacity: 0.3;
 }
 
 // Описание
@@ -162,6 +159,7 @@
     position: relative;
 
     align-items: flex-end;
+    min-height: 457px; // IE fix;
     padding-top: 25px;
     padding-bottom: 61px;
   }
@@ -195,7 +193,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    // display: none;
   }
 
   // Описание

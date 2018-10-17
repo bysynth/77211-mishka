@@ -16,6 +16,11 @@
   display: block;
 }
 
+.navigation__logo-image {
+  width: 86px;
+  height: 35px;
+}
+
 // Кнопка отображения меню в mobile версии
 
 .navigation__logo-toggle {
@@ -24,9 +29,9 @@
   right: 0;
 
   display: block;
-  width: 21px;
-  height: 20px;
-  padding-top: 40px;
+  width: 1px;
+  height: 1px;
+  padding-top: 39px;
   padding-right: 41px;
   padding-bottom: 39px;
   padding-left: 41px;
@@ -45,6 +50,10 @@
 
 .navigation__logo-toggle--open {
   background-image: url("../img/icon-menu-open.svg");
+}
+
+.navigation--nojs .navigation__logo-toggle {
+  display: none;
 }
 
 // Обертки списков навигации
@@ -77,22 +86,10 @@
   &:hover,
   &:focus {
     color: rgba($color: $primary-text, $alpha: 0.6);
-
-    & .navigation__icon {
-      opacity: 1;
-    }
-
-    & .navigation__icon path {
-      fill: #63d1bb;
-    }
   }
 
   &:active {
     color: rgba($color: $primary-text, $alpha: 0.3);
-
-    & .navigation__icon {
-      opacity: 0.3;
-    }
   }
 }
 
@@ -108,6 +105,19 @@
   opacity: 0.2;
 }
 
+.navigation__link:hover .navigation__icon,
+.navigation__link:focus .navigation__icon {
+  opacity: 1;
+
+  fill: #63d1bb;
+}
+
+.navigation__link:active .navigation__icon {
+  opacity: 0.3;
+
+  fill: #63d1bb;
+}
+
 .navigation__icon--search {
   margin-right: 28px;
 }
@@ -120,6 +130,14 @@
 
 .navigation__delivery {
   display: none;
+}
+
+// ---------- MOBILE MENU ----------
+@media (max-width: $mobile-width-only) {
+  .navigation--closed .navigation__wrapper-top,
+  .navigation--closed .navigation__wrapper-interactive {
+    display: none;
+  }
 }
 
 // ---------- TABLET ----------
@@ -139,6 +157,11 @@
     padding-left: $tablet-padding;
 
     border-top: none;
+  }
+
+  .navigation__logo-image {
+    width: 113px;
+    height: 46px;
   }
 
   // Кнопка отображения меню в mobile версии
@@ -254,6 +277,11 @@
     &:active {
       opacity: 0.3;
     }
+  }
+
+  .navigation__logo-image {
+    width: 149px;
+    height: 72px;
   }
 
   // Обертки списков навигации
