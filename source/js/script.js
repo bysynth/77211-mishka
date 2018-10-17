@@ -49,3 +49,26 @@ if (overlay !== null) {
     popup.classList.remove("modal--show");
   });
 }
+
+// ---------- Корзина ----------
+
+ymaps.ready(init);
+var myMap;
+var myPlacemark;
+
+function init() {
+  myMap = new ymaps.Map('map', {
+    center: [59.938913419022086,30.322913165344634],
+      zoom: 16,
+      controls: []
+    }),
+  myPlacemark = new ymaps.Placemark([59.93875191633704,30.32310628439369], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: 'img/icon-map-pin.svg',
+    iconImageSize: [67, 100],
+    iconImageOffset: [-30, -90]
+  });
+
+  myMap.geoObjects.add(myPlacemark);
+  myMap.behaviors.disable('scrollZoom');
+}
