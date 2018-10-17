@@ -20,11 +20,6 @@
   display: block;
   padding: 10px;
 
-  &:hover .social__icon path,
-  &:focus .social__icon path {
-    fill: #46c1ae;
-  }
-
   &:active {
     opacity: 0.3;
   }
@@ -33,6 +28,13 @@
 .social__icon {
   display: block;
 }
+
+.social__link:hover .social__icon,
+.social__link:focus .social__icon,
+.social__link:active .social__icon {
+  fill: #46c1ae;
+}
+
 
 // TABLET
 

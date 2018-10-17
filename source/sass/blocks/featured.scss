@@ -194,7 +194,7 @@
   // Обертка для контента блока
 
   .featured__content {
-    @include center (1150);
+    @include center(1150);
 
     padding-top: 126px;
     padding-bottom: 74px;

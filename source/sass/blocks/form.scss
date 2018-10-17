@@ -248,22 +248,16 @@
   &:focus {
     border-bottom-color: #62d1ba;
   }
+}
 
-  &:hover + .form__icon {
-    opacity: 1;
+.form__input:hover + .form__icon {
+  opacity: 1;
+  fill: #62d1ba;
+}
 
-    & path {
-      fill: #62d1ba;
-    }
-  }
-
-  &:focus + .form__icon {
-    opacity: 1;
-
-    & path {
-      fill: #62d1ba;
-    }
-  }
+.form__input:focus + .form__icon {
+  opacity: 1;
+  fill: #62d1ba;
 }
 
 // Иконки в инпутах

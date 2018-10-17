@@ -45,9 +45,9 @@
   .catalog__item {
     margin-right: 51px;
     margin-bottom: 57px;
-  }
 
-  .catalog__item:nth-child(3n) {
-    margin-right: 0;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
   }
 }

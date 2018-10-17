@@ -43,14 +43,14 @@
   font-weight: bold;
   color: $primary-text;
 
-  &:hover .footer__link-icon,
-  &:focus .footer__link-icon {
-    fill: #46c1ae;
-  }
-
   &:active {
     opacity: 0.3;
   }
+}
+
+.footer__link:hover .footer__link-icon,
+.footer__link:focus .footer__link-icon {
+  fill: #46c1ae;
 }
 
 // Иконка ссылки
@@ -85,8 +85,8 @@
     line-height: 1;
   }
 
-  .footer__logo[href]:hover .footer__logo-image path,
-  .footer__logo[href]:focus .footer__logo-image path {
+  .footer__logo[href]:hover .footer__logo-image,
+  .footer__logo[href]:focus .footer__logo-image {
     fill: #46c1ae;
   }
 
@@ -113,10 +113,6 @@
 // ---------- DESKTOP ----------
 
 @media (min-width: $desktop-width) {
-  .footer {
-    // display: flex;
-  }
-
   .footer__wrapper {
     @include center(1150);
   }

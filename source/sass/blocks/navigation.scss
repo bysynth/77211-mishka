@@ -31,7 +31,6 @@
   display: block;
   width: 1px;
   height: 1px;
-
   padding-top: 39px;
   padding-right: 41px;
   padding-bottom: 39px;
@@ -87,22 +86,10 @@
   &:hover,
   &:focus {
     color: rgba($color: $primary-text, $alpha: 0.6);
-
-    & .navigation__icon {
-      opacity: 1;
-    }
-
-    & .navigation__icon path {
-      fill: #63d1bb;
-    }
   }
 
   &:active {
     color: rgba($color: $primary-text, $alpha: 0.3);
-
-    & .navigation__icon {
-      opacity: 0.3;
-    }
   }
 }
 
@@ -116,6 +103,19 @@
 
 .navigation__icon {
   opacity: 0.2;
+}
+
+.navigation__link:hover .navigation__icon,
+.navigation__link:focus .navigation__icon {
+  opacity: 1;
+
+  fill: #63d1bb;
+}
+
+.navigation__link:active .navigation__icon {
+  opacity: 0.3;
+
+  fill: #63d1bb;
 }
 
 .navigation__icon--search {

@@ -67,11 +67,10 @@
   line-height: 24px;
   font-weight: bold;
   color: #ffffff;
+}
 
-  &:active .hero__icon,
-  &:active .hero__link-text {
-    opacity: 0.3;
-  }
+.hero__link:active .hero__link-text {
+  opacity: 0.3;
 }
 
 // Фоны ссылка-блока
@@ -103,10 +102,19 @@
 
 .hero__icon {
   opacity: 0.5;
+}
 
-  & path {
-    fill: #149080;
-  }
+.hero__link:hover .hero__icon,
+.hero__link:focus .hero__icon {
+  opacity: 0.7;
+}
+
+.hero__link:active .hero__icon {
+  opacity: 0.3;
+}
+
+.hero__icon path {
+  fill: #149080;
 }
 
 .hero__icon--interior {
