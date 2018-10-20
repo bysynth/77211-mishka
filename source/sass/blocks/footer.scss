@@ -48,17 +48,17 @@
   }
 }
 
-.footer__link:hover .footer__link-icon,
-.footer__link:focus .footer__link-icon {
-  fill: #46c1ae;
-}
-
 // Иконка ссылки
 
 .footer__link-icon {
   margin-left: 30px;
 
   fill: #63d1bb;
+}
+
+.footer__link:hover .footer__link-icon,
+.footer__link:focus .footer__link-icon {
+  fill: #46c1ae;
 }
 
 // ---------- TABLET ----------
