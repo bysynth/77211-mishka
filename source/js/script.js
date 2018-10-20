@@ -50,9 +50,12 @@ if (overlay !== null) {
   });
 }
 
-// ---------- Корзина ----------
+// ---------- Яндекс Карта ----------
 
-ymaps.ready(init);
+if (typeof ymaps !== "undefined") {
+  ymaps.ready(init);
+}
+
 var myMap;
 var myPlacemark;
 
