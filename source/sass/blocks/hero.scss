@@ -5,7 +5,7 @@
 }
 
 .hero--main-page {
-  padding-top: 71px;
+  padding-top: 70px;
 
   background-image: url("../img/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
@@ -59,7 +59,7 @@
   align-items: center;
   width: 100%;
   min-height: 103px;
-  padding-top: 18px;
+  padding-top: 12px;
   padding-bottom: 18px;
   padding-left: 29px;
 
@@ -116,11 +116,12 @@
 }
 
 .hero__icon--interior {
-  margin-top: 5px;
+  margin-top: 10px;
   margin-right: 36px;
 }
 
 .hero__icon--toy {
+  margin-top: 5px;
   margin-right: 27px;
 }
 
@@ -130,11 +131,11 @@
   // Стили блока для главной страницы
 
   .hero--main-page {
-    padding-top: 153px;
+    padding-top: 92px;
 
     background-image: url("../img/hero-tablet@1x.jpg");
     background-repeat: no-repeat;
-    background-position: center -1px;
+    background-position: center -62px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/hero-tablet@2x.jpg");
@@ -189,6 +190,7 @@
     align-items: center;
     min-height: 117px;
     padding-left: 36px;
+    padding-top: 17px;
 
     font-size: 20px;
     line-height: 30px;
@@ -202,6 +204,10 @@
   }
 
   // Иконки в ссылках-блоках
+
+  .hero__icon--interior {
+    margin-top: 6px;
+  }
 
   .hero__icon--toy {
     margin-top: 5px;
@@ -218,7 +224,10 @@
 
   // Стили блока для главной страницы
   .hero--main-page {
+    padding-top: 112px;
+
     background-image: url("../img/hero-desktop@1x.jpg");
+    background-position: center -42px;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/hero-desktop@2x.jpg");
@@ -255,5 +264,11 @@
       min-height: 122px;
       margin-top: -5px;
     }
+  }
+
+  // Иконки в ссылках-блоках
+
+  .hero__icon--toy {
+    margin-right: 35px;
   }
 }
