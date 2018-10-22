@@ -175,8 +175,6 @@
   .navigation__wrapper-top {
     order: 2;
     margin-left: 32px;
-
-    // background-color: transparent;
   }
 
   .navigation__wrapper-interactive {
@@ -191,12 +189,19 @@
     display: flex;
   }
 
+  .navigation__list--top {
+    flex-wrap: wrap;
+    width: 365px;
+  }
+
   .navigation__item {
     border-bottom: none;
   }
 
   .navigation__item--search {
     @include border(left);
+
+    width: 83px;
   }
 
   .navigation__item--basket {
@@ -241,10 +246,14 @@
   // Текст о доставке
 
   .navigation__delivery {
+    @include margin-clean;
+
     display: block;
     order: 3;
+    max-width: 320px;
     margin-right: 50px;
     margin-left: auto;
+    padding-top: 15px;
   }
 }
 
@@ -260,7 +269,6 @@
   .navigation__logo {
     justify-content: center;
     order: 2;
-    // width: 305px;
     width: 26.5%;
     padding-top: 8px;
     padding-right: 46px;
@@ -297,7 +305,6 @@
 
   .navigation__wrapper-interactive {
     order: 3;
-    // width: 400px;
     width: 34.8%;
     padding-right: 50px;
   }
@@ -305,17 +312,26 @@
   .navigation__wrapper-promo {
     display: block;
     order: 4;
-    width: 315px;
-    min-height: 61px;
+    width: 550px;
     margin-left: 50px;
   }
 
   // Списки навигационных элементов и их элементы
 
   .navigation__list {
-    justify-content: space-between;
-    align-items: center;
     height: 100%;
+  }
+
+  .navigation__list--top {
+    flex-wrap: nowrap;
+    width: auto;
+  }
+
+  .navigation__list--promo {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
   }
 
   .navigation__item {
@@ -326,14 +342,16 @@
     border-bottom: none;
   }
 
-  .navigation__item--top-first {
-    @include border(right);
-
+  .navigation__item--top:first-child {
+    flex-shrink: 0;
+    width: 184px;
     padding-right: 35px;
   }
 
-  .navigation__item--top-second {
-    padding-right: 20px;
+  .navigation__item--top:not(:first-child) {
+    @include border(left);
+
+    padding-right: 10px;
     padding-left: 35px;
   }
 
@@ -342,7 +360,14 @@
   }
 
   .navigation__item--basket {
+    width: 268px;
     padding-left: 31px;
+  }
+
+  .navigation__item--promo {
+    height: auto;
+    margin-top: 15px;
+    margin-right: 62px;
   }
 
   .navigation__link--top {
@@ -377,5 +402,6 @@
 
   .navigation__delivery {
     order: 5;
+    max-width: 450px;
   }
 }
