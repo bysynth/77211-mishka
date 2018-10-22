@@ -25,14 +25,13 @@ var popup = document.querySelector('.modal-basket');
 var overlay = document.querySelector('.overlay');
 
 
-links.forEach(function (element) {
-  element.addEventListener('click', function (evt) {
+for (var i = 0; i < links.length; i++) {
+  links[i].addEventListener('click', function (evt) {
     evt.preventDefault();
     overlay.classList.add('overlay--show');
     popup.classList.add('modal--show');
   });
-});
-
+}
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
