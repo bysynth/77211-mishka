@@ -101,8 +101,9 @@
 // Иконки в ссылках-блоках
 
 .hero__icon {
-  fill: #149080;
   opacity: 0.5;
+
+  fill: #149080;
 }
 
 .hero__link:hover .hero__icon,
@@ -127,9 +128,6 @@
 
 @media (min-width: $tablet-width) {
   // Стили блока для главной страницы
-  .hero {
-    margin-top: -61px;
-  }
 
   .hero--main-page {
     padding-top: 153px;
