@@ -3,7 +3,7 @@
 .video {
   @include center(260);
 
-  padding-bottom: 33px;
+  padding-bottom: 32px;
 
   border: 1px solid #ececec;
 
@@ -32,6 +32,8 @@
   margin-right: 20px;
   margin-left: 7px;
   fill: #63d1bb;
+
+  transform: translateY(-3px);
 }
 
 .video__title-text {
@@ -54,7 +56,7 @@
   @include padding-clean;
 
   position: absolute;
-  top: 50%;
+  top: 52%;
   left: 50%;
 
   background-color: transparent;
@@ -100,7 +102,7 @@
 
     display: flex;
     flex-direction: column;
-    padding-bottom: 45px;
+    padding-bottom: 44px;
   }
 
   // Заголовок блока
@@ -118,6 +120,8 @@
   .video__title-icon {
     margin-right: 22px;
     margin-left: 8px;
+
+    transform: translateY(0);
   }
 
   .video__title-text {
@@ -131,13 +135,17 @@
     margin-bottom: 9px;
   }
 
+  .video__play-button {
+    top: 50%;
+  }
+
   // Описание
 
   .video__description {
     order: 3;
-    padding-top: 4px;
-    padding-right: 41px;
-    padding-left: 41px;
+    padding-top: 5px;
+    padding-right: 40px;
+    padding-left: 40px;
   }
 
   .video__text {
@@ -159,9 +167,9 @@
     position: relative;
 
     align-items: flex-end;
-    min-height: 457px; // IE fix;
+    min-height: 456px; // IE fix;
     padding-top: 25px;
-    padding-bottom: 61px;
+    padding-bottom: 60px;
   }
 
   // Заголовок блока
