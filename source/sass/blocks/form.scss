@@ -49,6 +49,7 @@
 
 .form__legend {
   @include margin-clean;
+
   position: relative;
 
   font-size: 17px;
@@ -253,11 +254,13 @@
 
 .form__input:hover + .form__icon {
   opacity: 1;
+
   fill: #62d1ba;
 }
 
 .form__input:focus + .form__icon {
   opacity: 1;
+
   fill: #62d1ba;
 }
 
@@ -552,6 +555,7 @@
 
   .form__text {
     order: 2;
+    max-width: 400px;
     margin-bottom: 0;
 
     font-size: 17px;
