@@ -48,6 +48,7 @@
 // Легенда
 
 .form__legend {
+  @include margin-clean;
   position: relative;
 
   font-size: 17px;
