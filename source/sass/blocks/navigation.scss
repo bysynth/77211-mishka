@@ -76,7 +76,7 @@
   display: block;
   padding-top: 27px;
   padding-bottom: 27px;
-  padding-left: 76px;
+  padding-left: 75px;
 
   font-size: 17px;
   line-height: 24px;
@@ -96,7 +96,7 @@
 .navigation__link--interactive {
   display: flex;
   align-items: center;
-  padding-left: 30px;
+  padding-left: 31px;
 }
 
 // Иконки у ссылок навигации
@@ -119,11 +119,11 @@
 }
 
 .navigation__icon--search {
-  margin-right: 28px;
+  margin-right: 26px;
 }
 
 .navigation__icon--cart {
-  margin-right: 25px;
+  margin-right: 23px;
 }
 
 // Текст о доставке (скрыт на мобильных)
@@ -154,7 +154,7 @@
     justify-content: flex-start;
     width: 48.17%;
     padding-bottom: 20px;
-    padding-left: $tablet-padding;
+    padding-left: 48px;
 
     border-top: none;
   }
@@ -218,9 +218,9 @@
   }
 
   .navigation__link--search {
-    padding-top: 32px;
+    padding-top: 33px;
     padding-right: 32px;
-    padding-bottom: 32px;
+    padding-bottom: 31px;
     padding-left: 32px;
 
     font-size: 0;
@@ -251,9 +251,9 @@
     display: block;
     order: 3;
     max-width: 320px;
+    margin-top: 17px;
     margin-right: 50px;
     margin-left: auto;
-    padding-top: 17px;
 
     line-height: 24px;
   }
@@ -274,7 +274,7 @@
     width: 26.5%;
     padding-top: 8px;
     padding-right: 46px;
-    padding-bottom: 7px;
+    padding-bottom: 8px;
     padding-left: 0;
   }
 
@@ -368,7 +368,7 @@
 
   .navigation__item--promo {
     height: auto;
-    margin-top: 15px;
+    margin-top: 17px;
     margin-right: 62px;
   }
 
@@ -397,7 +397,7 @@
   // Иконки у ссылок навигации
 
   .navigation__icon--cart {
-    margin-right: 33px;
+    margin-right: 31px;
   }
 
   // Текст о доставке
