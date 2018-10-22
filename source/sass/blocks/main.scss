@@ -3,13 +3,21 @@
 }
 
 .main--catalog {
-  padding-bottom: 63px;
+  padding-bottom: 59px;
+}
+
+// ---------- TABLET ----------
+
+@media (min-width: $tablet-width) {
+  .main--catalog {
+    padding-bottom: 64px;
+  }
 }
 
 // ---------- DESKTOP ----------
 
 @media (min-width: $desktop-width) {
   .main--catalog {
-    padding-bottom: 103px;
+    padding-bottom: 104px;
   }
 }
