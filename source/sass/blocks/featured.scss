@@ -2,6 +2,7 @@
 
 .featured::after {
   @include center(400);
+
   content: "";
 
   display: block;
@@ -34,8 +35,6 @@
   @include title;
 
   margin-bottom: 5px;
-
-  letter-spacing: 0.1px; // Для Pixel Perfect
 }
 
 .featured__marker {
@@ -104,7 +103,7 @@
     position: relative;
 
     padding-top: 47px;
-    padding-bottom: 53px;
+    padding-bottom: 52px;
   }
 
   // Заголовок
@@ -113,22 +112,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 44px;
+    margin-bottom: 50px;
   }
 
   .featured__name {
     @include margin-clean;
 
-    margin-bottom: 5px;
-    margin-left: -3px;
-
     font-size: 43px;
     line-height: 50px;
-    letter-spacing: -1px; // Проблема с заголовком !!! Сделать Pixer Perfect не получается.
+
+    transform: translateX(-3px);
   }
 
   .featured__marker {
     width: 72px;
+    margin-top: 5px;
     margin-right: 27px;
 
     line-height: 17px;
@@ -139,13 +137,13 @@
 
   .featured__info {
     width: 50%;
-    margin-bottom: 56px;
+    margin-bottom: 55px;
     padding-right: 44px;
   }
 
   .featured__description {
     min-height: 90px;
-    margin-bottom: 36px;
+    margin-bottom: 35px;
 
     font-size: 17px;
     line-height: 30px;
@@ -169,7 +167,7 @@
   }
 
   .featured__price {
-    margin-bottom: 34px;
+    margin-bottom: 35px;
 
     font-size: 20px;
     text-align: center;
@@ -179,7 +177,6 @@
 // ---------- DESKTOP ----------
 
 @media (min-width: $desktop-width) {
-
   // Svg полоса внизу блока
 
   .featured::after {
@@ -196,7 +193,7 @@
   .featured__content {
     @include center(1150);
 
-    padding-top: 126px;
+    padding-top: 125px;
     padding-bottom: 74px;
   }
 
@@ -207,20 +204,21 @@
     z-index: 21;
 
     justify-content: flex-start;
-    margin-bottom: 44px;
+    margin-bottom: 49px;
   }
 
   .featured__name {
     order: 2;
-    margin-bottom: 5px;
-    margin-left: -3px;
 
     font-size: 53px;
     line-height: 57px;
+
+    transform: translateX(-3px);
   }
 
   .featured__marker {
     order: 1;
+    margin-top: 7px;
     margin-right: 56px;
     margin-left: 46px;
   }
@@ -229,7 +227,7 @@
 
   .featured__info {
     width: 30%;
-    margin-bottom: 109px;
+    margin-bottom: 107px;
     margin-left: 175px;
     padding-right: 23px;
   }

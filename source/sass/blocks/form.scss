@@ -1,7 +1,7 @@
 // Отступ снизу
 
 .form {
-  padding-bottom: 55px;
+  padding-bottom: 57px;
 }
 
 // Филдсеты
@@ -48,6 +48,8 @@
 // Легенда
 
 .form__legend {
+  @include margin-clean;
+
   position: relative;
 
   font-size: 17px;
@@ -86,7 +88,7 @@
 .form__legend::before {
   content: "";
   position: absolute;
-  top: 7px;
+  top: 8px;
   left: 62px;
 
   width: calc(100% - 62px);
@@ -128,6 +130,8 @@
   color: $primary-text;
 
   cursor: pointer;
+
+  user-select: none;
 
   &::before {
     content: "";
@@ -231,7 +235,7 @@
 
   width: 100%;
   height: 47px; // IE fix
-  padding-top: 11px;
+  padding-top: 9px;
   padding-right: 40px;
   padding-bottom: 16px;
 
@@ -252,11 +256,13 @@
 
 .form__input:hover + .form__icon {
   opacity: 1;
+
   fill: #62d1ba;
 }
 
 .form__input:focus + .form__icon {
   opacity: 1;
+
   fill: #62d1ba;
 }
 
@@ -390,6 +396,7 @@
   .form__legend {
     width: 25%;
     margin-top: 17px;
+    padding-right: 10px;
   }
 
   // Линия у легенды
@@ -551,6 +558,7 @@
 
   .form__text {
     order: 2;
+    max-width: 400px;
     margin-bottom: 0;
 
     font-size: 17px;
@@ -570,7 +578,7 @@
   // Отступ снизу
 
   .form {
-    padding-bottom: 51px;
+    padding-bottom: 50px;
   }
 
   // Филдсеты

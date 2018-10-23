@@ -4,7 +4,7 @@
   @include layout-padding($mobile-padding);
   @include center(320);
 
-  padding-top: 27px;
+  padding-top: 25px;
   padding-bottom: 10px;
 }
 
@@ -16,7 +16,7 @@
 
   margin-bottom: 32px;
 
-  letter-spacing: -0.3px; // для Pixel Perfect
+  transform: translateX(-2px);
 }
 
 // Списки преимуществ
@@ -48,6 +48,7 @@
 
 .about__icon {
   display: block;
+
   fill: #63d1bb;
 }
 
@@ -95,7 +96,7 @@
     @include layout-padding($tablet-padding);
     @include center(768);
 
-    padding-top: 48px;
+    padding-top: 49px;
     padding-bottom: 53px;
   }
 
@@ -103,10 +104,11 @@
 
   .about__title {
     margin-bottom: 48px;
-    margin-left: -4px;
 
     font-size: 43px;
     line-height: 50px;
+
+    transform: translateX(-5px);
   }
 
   // Списки преимуществ
@@ -159,6 +161,9 @@
 
     font-size: 53px;
     line-height: 57px;
+
+    transform: translateX(0);
+    letter-spacing: -0.4px;
   }
 
   // Элемент преимущества

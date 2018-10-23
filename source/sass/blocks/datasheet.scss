@@ -17,17 +17,26 @@
 }
 
 .datasheet__cell--width {
-  width: 100px;
+  width: 97px;
 }
 
 // ---------- TABLET ----------
 
 @media (min-width: $tablet-width) {
-  .datasheet {
-    margin-bottom: 28px;
+  .datasheet__cell {
+    padding-top: 9px;
+    padding-bottom: 10px;
   }
 
   .datasheet__cell--width {
-    width: 95px;
+    width: 96px;
+  }
+}
+
+// ---------- DESKTOP ----------
+
+@media (min-width: $desktop-width) {
+  .datasheet__cell {
+    padding-bottom: 11px;
   }
 }

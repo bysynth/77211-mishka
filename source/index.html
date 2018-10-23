@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Мишка | Главная страница</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="page">
@@ -111,12 +111,12 @@
         </button>
       </div>
       <div class="navigation__wrapper-top">
-        <ul class="navigation__list">
-          <li class="navigation__item navigation__item--top-first">
+        <ul class="navigation__list navigation__list--top">
+          <li class="navigation__item navigation__item--top">
             <a class="navigation__link navigation__link--top" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="navigation__item navigation__item--top-second">
-            <a class="navigation__link navigation__link--top navigation__link--top-second" href="form.html">Вязание на заказ</a>
+          <li class="navigation__item navigation__item--top">
+            <a class="navigation__link navigation__link--top" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
       </div>
@@ -141,11 +141,11 @@
         </ul>
       </div>
       <div class="navigation__wrapper-promo">
-        <ul class="navigation__list">
-          <li class="navigation__item">
+        <ul class="navigation__list navigation__list--promo">
+          <li class="navigation__item navigation__item--promo">
             <a class="navigation__link navigation__link--promo" href="#">Новые поступления</a>
           </li>
-          <li class="navigation__item">
+          <li class="navigation__item navigation__item--promo">
             <a class="navigation__link navigation__link--promo" href="#">Распродажа</a>
           </li>
         </ul>
@@ -202,9 +202,9 @@
           </table>
         </div>
         <picture class="featured__picture">
-          <source srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x" media="(min-width: 1150px)">
-          <source srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-mobile@2x.webp 2x" media="(min-width: 768px)">
-          <source srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
+          <source type="image/webp" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x" media="(min-width: 1150px)">
+          <source type="image/webp" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-mobile@2x.webp 2x" media="(min-width: 768px)">
+          <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
 
           <source srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x" media="(min-width: 1150px)">
           <source srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x" media="(min-width: 768px)">
@@ -212,7 +212,7 @@
         </picture>
         <div class="featured__buy">
           <p class="featured__price">Цена: 990 руб.</p>
-          <a class="button featured__order js-basket" href="#">Заказать</a>
+          <a class="button featured__order js-basket" href="size.html">Заказать</a>
         </div>
       </div>
     </section>
@@ -279,7 +279,7 @@
             <span class="visually-hidden">Вперед</span>
           </button>
         </p>
-        <a class="button reviews__write" href="#">Написать</a>
+        <a class="button reviews__write" href="white-review.html">Написать</a>
       </div>
     </section>
     <section class="contacts">
@@ -300,9 +300,9 @@
       </div>
       <div class="contacts__map">
         <picture class="contacts__map-picture">
-          <source srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x" media="(min-width: 1150px)">
-          <source srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x" media="(min-width: 768px)">
-          <source srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
+          <source type="image/webp" srcset="img/map-desktop@1x.webp 1x, img/map-desktop@2x.webp 2x" media="(min-width: 1150px)">
+          <source type="image/webp" srcset="img/map-tablet@1x.webp 1x, img/map-tablet@2x.webp 2x" media="(min-width: 768px)">
+          <source type="image/webp" srcset="img/map-mobile@1x.webp 1x, img/map-mobile@2x.webp 2x">
 
           <source srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x" media="(min-width: 1150px)">
           <source srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x" media="(min-width: 768px)">
@@ -312,7 +312,7 @@
           <span class="visually-hidden">Яндекс карта</span>
         </div>
       </div>
-      <a class="button contacts__write-us" href="#">Напишите нам</a>
+      <a class="button contacts__write-us" href="feedback.html">Напишите нам</a>
     </section>
   </main>
 

@@ -76,7 +76,7 @@
   display: block;
   padding-top: 27px;
   padding-bottom: 27px;
-  padding-left: 76px;
+  padding-left: 75px;
 
   font-size: 17px;
   line-height: 24px;
@@ -96,7 +96,7 @@
 .navigation__link--interactive {
   display: flex;
   align-items: center;
-  padding-left: 30px;
+  padding-left: 31px;
 }
 
 // Иконки у ссылок навигации
@@ -119,11 +119,11 @@
 }
 
 .navigation__icon--search {
-  margin-right: 28px;
+  margin-right: 26px;
 }
 
 .navigation__icon--cart {
-  margin-right: 25px;
+  margin-right: 23px;
 }
 
 // Текст о доставке (скрыт на мобильных)
@@ -154,7 +154,7 @@
     justify-content: flex-start;
     width: 48.17%;
     padding-bottom: 20px;
-    padding-left: $tablet-padding;
+    padding-left: 48px;
 
     border-top: none;
   }
@@ -175,8 +175,6 @@
   .navigation__wrapper-top {
     order: 2;
     margin-left: 32px;
-
-    // background-color: transparent;
   }
 
   .navigation__wrapper-interactive {
@@ -191,12 +189,19 @@
     display: flex;
   }
 
+  .navigation__list--top {
+    flex-wrap: wrap;
+    width: 365px;
+  }
+
   .navigation__item {
     border-bottom: none;
   }
 
   .navigation__item--search {
     @include border(left);
+
+    width: 83px;
   }
 
   .navigation__item--basket {
@@ -213,9 +218,9 @@
   }
 
   .navigation__link--search {
-    padding-top: 32px;
+    padding-top: 33px;
     padding-right: 32px;
-    padding-bottom: 32px;
+    padding-bottom: 31px;
     padding-left: 32px;
 
     font-size: 0;
@@ -241,10 +246,16 @@
   // Текст о доставке
 
   .navigation__delivery {
+    @include margin-clean;
+
     display: block;
     order: 3;
+    max-width: 320px;
+    margin-top: 17px;
     margin-right: 50px;
     margin-left: auto;
+
+    line-height: 24px;
   }
 }
 
@@ -260,11 +271,10 @@
   .navigation__logo {
     justify-content: center;
     order: 2;
-    // width: 305px;
     width: 26.5%;
     padding-top: 8px;
     padding-right: 46px;
-    padding-bottom: 7px;
+    padding-bottom: 8px;
     padding-left: 0;
   }
 
@@ -297,7 +307,6 @@
 
   .navigation__wrapper-interactive {
     order: 3;
-    // width: 400px;
     width: 34.8%;
     padding-right: 50px;
   }
@@ -305,17 +314,26 @@
   .navigation__wrapper-promo {
     display: block;
     order: 4;
-    width: 315px;
-    min-height: 61px;
+    width: 550px;
     margin-left: 50px;
   }
 
   // Списки навигационных элементов и их элементы
 
   .navigation__list {
-    justify-content: space-between;
-    align-items: center;
     height: 100%;
+  }
+
+  .navigation__list--top {
+    flex-wrap: nowrap;
+    width: auto;
+  }
+
+  .navigation__list--promo {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
   }
 
   .navigation__item {
@@ -326,14 +344,16 @@
     border-bottom: none;
   }
 
-  .navigation__item--top-first {
-    @include border(right);
-
+  .navigation__item--top:first-child {
+    flex-shrink: 0;
+    width: 184px;
     padding-right: 35px;
   }
 
-  .navigation__item--top-second {
-    padding-right: 20px;
+  .navigation__item--top:not(:first-child) {
+    @include border(left);
+
+    padding-right: 10px;
     padding-left: 35px;
   }
 
@@ -342,7 +362,14 @@
   }
 
   .navigation__item--basket {
+    width: 268px;
     padding-left: 31px;
+  }
+
+  .navigation__item--promo {
+    height: auto;
+    margin-top: 17px;
+    margin-right: 62px;
   }
 
   .navigation__link--top {
@@ -370,12 +397,13 @@
   // Иконки у ссылок навигации
 
   .navigation__icon--cart {
-    margin-right: 33px;
+    margin-right: 31px;
   }
 
   // Текст о доставке
 
   .navigation__delivery {
     order: 5;
+    max-width: 450px;
   }
 }
