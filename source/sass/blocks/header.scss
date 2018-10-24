@@ -38,11 +38,11 @@
 
 @media (min-width: $desktop-width) {
   .header::after {
-    bottom: -27px;
+    bottom: -25px;
 
     height: 47px;
     background-position: 12px;
-    background-size: 1250px 43px;
+    background-size: 1250px 34px;
   }
 
   .header--inner::after {
