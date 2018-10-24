@@ -19,7 +19,18 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**"
+    "!source/img/README",
+    "!source/img/icon-*.svg",
+    "!source/img/htmlacademy.svg",
+    "source/img/icon-flag.svg",
+    "source/img/icon-left-arrow.svg",
+    "source/img/icon-right-arrow.svg",
+    "source/img/icon-map-pin.svg",
+    "source/img/icon-menu-close.svg",
+    "source/img/icon-menu-open.svg",
+    "source/img/icon-tick.svg",
+    "source/js/**",
+    "!source/js/README"
   ], {
       base: "source"
     })
@@ -61,7 +72,18 @@ gulp.task("webp", function () {
 });
 
 gulp.task("sprite", function () {
-  return gulp.src("source/img/icon-*.svg")
+  return gulp.src([
+      "source/img/icon-*.svg",
+      "!source/img/icon-flag.svg",
+      "!source/img/icon-left-arrow.svg",
+      "!source/img/icon-right-arrow.svg",
+      "!source/img/icon-map-pin.svg",
+      "!source/img/icon-menu-close.svg",
+      "!source/img/icon-menu-open.svg",
+      "!source/img/icon-tick.svg",
+      "source/img/logo-footer.svg",
+      "source/img/logo-htmlacademy.svg"
+    ])
     .pipe(svgstore({
       inlineSvg: true
     }))
