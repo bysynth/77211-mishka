@@ -13,6 +13,8 @@ var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
+var htmlmin = require("gulp-htmlmin");
+var uglify = require("gulp-uglify");
 var server = require("browser-sync").create();
 
 gulp.task("copy", function () {
@@ -30,7 +32,8 @@ gulp.task("copy", function () {
     "source/img/icon-menu-open.svg",
     "source/img/icon-tick.svg",
     "source/js/**",
-    "!source/js/README"
+    "!source/js/README",
+    "!source/js/script.js"
   ], {
       base: "source"
     })
@@ -73,17 +76,17 @@ gulp.task("webp", function () {
 
 gulp.task("sprite", function () {
   return gulp.src([
-      "source/img/icon-*.svg",
-      "!source/img/icon-flag.svg",
-      "!source/img/icon-left-arrow.svg",
-      "!source/img/icon-right-arrow.svg",
-      "!source/img/icon-map-pin.svg",
-      "!source/img/icon-menu-close.svg",
-      "!source/img/icon-menu-open.svg",
-      "!source/img/icon-tick.svg",
-      "source/img/logo-footer.svg",
-      "source/img/logo-htmlacademy.svg"
-    ])
+    "source/img/icon-*.svg",
+    "!source/img/icon-flag.svg",
+    "!source/img/icon-left-arrow.svg",
+    "!source/img/icon-right-arrow.svg",
+    "!source/img/icon-map-pin.svg",
+    "!source/img/icon-menu-close.svg",
+    "!source/img/icon-menu-open.svg",
+    "!source/img/icon-tick.svg",
+    "source/img/logo-footer.svg",
+    "source/img/logo-htmlacademy.svg"
+  ])
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -96,7 +99,15 @@ gulp.task("html", function () {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"))
+});
+
+gulp.task("compress", function () {
+  return gulp.src("source/js/script.js")
+    .pipe(uglify())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"))
 });
 
 gulp.task("server", function () {
@@ -118,5 +129,5 @@ gulp.task("refresh", function (done) {
   done();
 })
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "compress"));
 gulp.task("start", gulp.series("build", "server"));
