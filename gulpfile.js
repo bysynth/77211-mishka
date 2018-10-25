@@ -20,19 +20,8 @@ var server = require("browser-sync").create();
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
-    "!source/img/README",
-    "!source/img/icon-*.svg",
-    "!source/img/htmlacademy.svg",
-    "source/img/icon-flag.svg",
-    "source/img/icon-left-arrow.svg",
-    "source/img/icon-right-arrow.svg",
-    "source/img/icon-map-pin.svg",
-    "source/img/icon-menu-close.svg",
-    "source/img/icon-menu-open.svg",
-    "source/img/icon-tick.svg",
-    "source/js/**",
-    "!source/js/README",
+    "source/img/*.{jpg,png,webp,svg}",
+    "source/js/*.js",
     "!source/js/script.js"
   ], {
       base: "source"
@@ -78,16 +67,7 @@ gulp.task("webp", function () {
 
 gulp.task("sprite", function () {
   return gulp.src([
-    "source/img/icon-*.svg",
-    "!source/img/icon-flag.svg",
-    "!source/img/icon-left-arrow.svg",
-    "!source/img/icon-right-arrow.svg",
-    "!source/img/icon-map-pin.svg",
-    "!source/img/icon-menu-close.svg",
-    "!source/img/icon-menu-open.svg",
-    "!source/img/icon-tick.svg",
-    "source/img/logo-footer.svg",
-    "source/img/logo-htmlacademy.svg"
+    "source/img/sprite/*.svg"
   ])
     .pipe(svgstore({
       inlineSvg: true
@@ -122,7 +102,7 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-  gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/img/sprite/*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });
 
