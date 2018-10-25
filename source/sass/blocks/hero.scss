@@ -179,6 +179,7 @@
   }
 
   .hero__item {
+    display: flex;
     width: 50%;
   }
 
@@ -189,8 +190,8 @@
     justify-content: space-between;
     align-items: center;
     min-height: 117px;
-    padding-left: 36px;
     padding-top: 17px;
+    padding-left: 36px;
 
     font-size: 20px;
     line-height: 30px;
