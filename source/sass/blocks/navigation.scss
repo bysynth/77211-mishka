@@ -173,6 +173,7 @@
   // Обертки списков навигации
 
   .navigation__wrapper-top {
+    display: flex;
     order: 2;
     margin-left: 32px;
   }
@@ -180,6 +181,7 @@
   .navigation__wrapper-interactive {
     @include border(bottom);
 
+    display: flex;
     width: 51.83%;
   }
 
@@ -191,7 +193,7 @@
 
   .navigation__list--top {
     flex-wrap: wrap;
-    width: 365px;
+    width: 410px;
   }
 
   .navigation__item {
@@ -279,6 +281,10 @@
     padding-left: 0;
   }
 
+  .navigation__logo-link {
+    align-self: center;
+  }
+
   .navigation__logo-link[href] {
     &:hover,
     &:focus {
@@ -316,7 +322,7 @@
     display: block;
     order: 4;
     width: 550px;
-    margin-left: 50px;
+    margin-left: 15px;
   }
 
   // Списки навигационных элементов и их элементы
@@ -336,18 +342,19 @@
   .navigation__item {
     display: flex;
     align-items: center;
-    height: 88px;
 
     border-bottom: none;
   }
 
   .navigation__item--top {
-    min-width: 184px;
+    width: 184px;
     padding-right: 10px;
   }
 
   .navigation__item--top:not(:first-child) {
     @include border(left);
+
+    width: 211px;
     padding-left: 35px;
   }
 
@@ -361,9 +368,10 @@
   }
 
   .navigation__item--promo {
-    height: auto;
+    width: 219px;
     margin-top: 17px;
-    margin-right: 62px;
+    padding-right: 10px;
+    padding-left: 35px;
   }
 
   .navigation__link--top {
