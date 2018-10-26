@@ -60,7 +60,7 @@ var myPlacemark;
 
 function init() {
   myMap = new ymaps.Map('map', {
-    center: [59.938913419022086,30.322913165344634],
+    center: [59.93905338736844,30.322891707672504],
       zoom: 16,
       controls: []
     }),
@@ -68,7 +68,7 @@ function init() {
     iconLayout: 'default#image',
     iconImageHref: 'img/icon-map-pin.svg',
     iconImageSize: [67, 100],
-    iconImageOffset: [-30, -90]
+    iconImageOffset: [-35, -110]
   });
 
   myMap.geoObjects.add(myPlacemark);

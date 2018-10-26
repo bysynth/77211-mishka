@@ -173,6 +173,7 @@
   // Обертки списков навигации
 
   .navigation__wrapper-top {
+    display: flex;
     order: 2;
     margin-left: 32px;
   }
@@ -180,6 +181,7 @@
   .navigation__wrapper-interactive {
     @include border(bottom);
 
+    display: flex;
     width: 51.83%;
   }
 
@@ -191,7 +193,7 @@
 
   .navigation__list--top {
     flex-wrap: wrap;
-    width: 365px;
+    width: 410px;
   }
 
   .navigation__item {
@@ -240,6 +242,7 @@
   }
 
   .navigation__icon--cart {
+    flex-shrink: 0;
     margin-right: 30px;
   }
 
@@ -276,6 +279,10 @@
     padding-right: 46px;
     padding-bottom: 8px;
     padding-left: 0;
+  }
+
+  .navigation__logo-link {
+    align-self: center;
   }
 
   .navigation__logo-link[href] {
@@ -315,17 +322,13 @@
     display: block;
     order: 4;
     width: 550px;
-    margin-left: 50px;
+    margin-left: 15px;
   }
 
   // Списки навигационных элементов и их элементы
 
-  .navigation__list {
-    height: 100%;
-  }
-
   .navigation__list--top {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: auto;
   }
 
@@ -339,21 +342,19 @@
   .navigation__item {
     display: flex;
     align-items: center;
-    height: 100%;
 
     border-bottom: none;
   }
 
-  .navigation__item--top:first-child {
-    flex-shrink: 0;
+  .navigation__item--top {
     width: 184px;
-    padding-right: 35px;
+    padding-right: 10px;
   }
 
   .navigation__item--top:not(:first-child) {
     @include border(left);
 
-    padding-right: 10px;
+    width: 211px;
     padding-left: 35px;
   }
 
@@ -367,9 +368,10 @@
   }
 
   .navigation__item--promo {
-    height: auto;
+    width: 219px;
     margin-top: 17px;
-    margin-right: 62px;
+    padding-right: 10px;
+    padding-left: 35px;
   }
 
   .navigation__link--top {
