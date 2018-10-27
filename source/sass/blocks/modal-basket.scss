@@ -2,6 +2,7 @@
 
 .modal-basket {
   @include layout-padding($mobile-padding);
+
   top: 50%;
   left: 50%;
 
@@ -41,57 +42,48 @@
   text-align: center;
 }
 
-// Блок выбора размера
+// Форма выбора размера
 
-.modal-basket__size {
+.modal-basket__form-list {
+  @include list-style-clean;
+
   display: flex;
   justify-content: space-between;
   margin-bottom: 31px;
 }
 
+.modal-basket__form-item {
+  width: 82px;
+}
+
 // Кнопка размера
 
-.modal-basket__size-button {
-  width: 82px;
-  margin-right: 7px;
+.modal-basket__label {
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
-  background-color: transparent;
-  border-color: #ececec;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  text-align: center;
+
+  border: 2px solid #ececec;
   cursor: pointer;
 
   &:hover,
   &:focus {
-    color: $secondary-text;
-
-    background-color: transparent;
     border-color: #c7c7c7;
-  }
-
-  &:active {
-    border-color: #63d1bb;
-    outline: none;
-  }
-
-  &:last-child {
-    margin-right: 0;
   }
 }
 
-// Активная кнопка размера
-
-.modal-basket__size-button--active {
+.modal-basket__input:checked + .modal-basket__label {
   border-color: #63d1bb;
-
-  &:hover,
-  &:focus,
-  &:active {
-    border-color: #63d1bb;
-  }
 }
 
 // Кнопка Добавить
 
-.modal-basket__add {
+.modal-basket__form-add {
   padding-top: 18px;
   padding-bottom: 18px;
 
@@ -139,7 +131,7 @@
 
   // Кнопка размера
 
-  .modal-basket__size-button {
+  .modal-basket__form-item {
     width: 112px;
   }
 }
