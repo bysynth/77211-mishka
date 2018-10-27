@@ -251,12 +251,23 @@
   <section class="modal modal-basket">
     <h2 class="modal-basket__title">Добавить в корзину</h2>
     <p class="modal-basket__text">Выберите размер:</p>
-    <div class="modal-basket__size">
-      <button class="button modal-basket__size-button modal-basket__size-button--active">S</button>
-      <button class="button modal-basket__size-button">M</button>
-      <button class="button modal-basket__size-button">L</button>
-    </div>
-    <a class="button modal-basket__add" href="#">Добавить</a>
+    <form class="modal-basket__form" action="https://echo.htmlacademy.ru" method="GET">
+      <ul class="modal-basket__form-list">
+        <li class="modal-basket__form-item">
+          <input class="visually-hidden modal-basket__input" type="radio" name="size" id="small" value="small" checked>
+          <label class="modal-basket__label" for="small">S</label>
+        </li>
+        <li class="modal-basket__form-item">
+          <input class="visually-hidden modal-basket__input" type="radio" name="size" id="medium" value="medium">
+          <label class="modal-basket__label" for="medium">M</label>
+        </li>
+        <li class="modal-basket__form-item">
+          <input class="visually-hidden modal-basket__input" type="radio" name="size" id="large" value="large">
+          <label class="modal-basket__label" for="large">L</label>
+        </li>
+      </ul>
+      <button class="button modal-basket__form-add" type="submit">Добавить</button>
+    </form>
   </section>
 
   <script src="js/picturefill.min.js"></script>
