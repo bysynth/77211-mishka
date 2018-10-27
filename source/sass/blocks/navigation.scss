@@ -82,7 +82,9 @@
   line-height: 24px;
   font-weight: bold;
   color: $primary-text;
+}
 
+.navigation__link[href] {
   &:hover,
   &:focus {
     color: rgba($color: $primary-text, $alpha: 0.6);
