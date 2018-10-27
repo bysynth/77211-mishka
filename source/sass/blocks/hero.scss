@@ -29,10 +29,11 @@
 // Заголовок
 
 .hero__title {
-  @include margin-clean;
-  @include layout-padding($mobile-padding);
-
+  width: 260px;
+  margin-top: 0;
+  margin-right: auto;
   margin-bottom: 122px;
+  margin-left: auto;
 
   font-size: 27px;
   line-height: 30px;
@@ -155,9 +156,7 @@
   // Заголовок
 
   .hero__title {
-    @include margin-clean;
-    @include layout-padding($tablet-padding);
-
+    width: 500px;
     margin-bottom: 373px;
 
     font-size: 43px;
@@ -245,6 +244,7 @@
   // Заголовок
 
   .hero__title {
+    width: 620px;
     margin-bottom: 359px;
 
     font-size: 53px;
