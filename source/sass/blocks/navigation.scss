@@ -82,7 +82,9 @@
   line-height: 24px;
   font-weight: bold;
   color: $primary-text;
+}
 
+.navigation__link[href] {
   &:hover,
   &:focus {
     color: rgba($color: $primary-text, $alpha: 0.6);
@@ -329,7 +331,7 @@
 
   .navigation__list--top {
     flex-wrap: wrap;
-    width: auto;
+    width: 395px;
   }
 
   .navigation__list--promo {
@@ -347,14 +349,14 @@
   }
 
   .navigation__item--top {
-    width: 184px;
+    width: 46.58%;
     padding-right: 10px;
   }
 
   .navigation__item--top:not(:first-child) {
     @include border(left);
 
-    width: 211px;
+    width: 53.42%;
     padding-left: 35px;
   }
 

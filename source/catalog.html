@@ -33,7 +33,7 @@
       <div class="navigation__wrapper-top">
         <ul class="navigation__list navigation__list--top">
           <li class="navigation__item navigation__item--top">
-            <a class="navigation__link navigation__link--top" href="catalog.html">Каталог товаров</a>
+            <a class="navigation__link navigation__link--top">Каталог товаров</a>
           </li>
           <li class="navigation__item navigation__item--top">
             <a class="navigation__link navigation__link--top" href="form.html">Вязание на заказ</a>
@@ -102,12 +102,12 @@
             </div>
             <div class="product__buy">
               <p class="product__price">1 200 руб.</p>
-              <button class="product__order js-basket" type="button">
+              <a class="product__order js-basket" href="?open-sizes">
                 <span class="visually-hidden">Положить в корзину</span>
                 <svg class="product__order-icon" width="21" height="18">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
-              </button>
+              </a>
             </div>
           </div>
         </li>
@@ -132,12 +132,12 @@
             </div>
             <div class="product__buy">
               <p class="product__price">690 руб.</p>
-              <button class="product__order js-basket" type="button">
+              <a class="product__order js-basket" href="?open-sizes">
                 <span class="visually-hidden">Положить в корзину</span>
                 <svg class="product__order-icon" width="21" height="18">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
-              </button>
+              </a>
             </div>
           </div>
         </li>
@@ -162,12 +162,12 @@
             </div>
             <div class="product__buy">
               <p class="product__price">1 500 руб.</p>
-              <button class="product__order js-basket" type="button">
+              <a class="product__order js-basket" href="?open-sizes">
                 <span class="visually-hidden">Положить в корзину</span>
                 <svg class="product__order-icon" width="21" height="18">
                   <use xlink:href="#icon-cart"></use>
                 </svg>
-              </button>
+              </a>
             </div>
           </div>
         </li>
@@ -199,7 +199,7 @@
       </div>
       <div class="video__description">
         <p class="video__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="button video__order js-basket" href="size.html">Сделать заказ</a>
+        <a class="button video__order js-basket" href="?open-sizes">Сделать заказ</a>
       </div>
     </section>
   </main>
@@ -251,12 +251,23 @@
   <section class="modal modal-basket">
     <h2 class="modal-basket__title">Добавить в корзину</h2>
     <p class="modal-basket__text">Выберите размер:</p>
-    <div class="modal-basket__size">
-      <button class="button modal-basket__size-button modal-basket__size-button--active">S</button>
-      <button class="button modal-basket__size-button">M</button>
-      <button class="button modal-basket__size-button">L</button>
-    </div>
-    <a class="button modal-basket__add" href="#">Добавить</a>
+    <form class="modal-basket__form" action="https://echo.htmlacademy.ru" method="GET">
+      <ul class="modal-basket__form-list">
+        <li class="modal-basket__form-item">
+          <input class="visually-hidden modal-basket__input" type="radio" name="size" id="small" value="small" checked>
+          <label class="modal-basket__label" for="small">S</label>
+        </li>
+        <li class="modal-basket__form-item">
+          <input class="visually-hidden modal-basket__input" type="radio" name="size" id="medium" value="medium">
+          <label class="modal-basket__label" for="medium">M</label>
+        </li>
+        <li class="modal-basket__form-item">
+          <input class="visually-hidden modal-basket__input" type="radio" name="size" id="large" value="large">
+          <label class="modal-basket__label" for="large">L</label>
+        </li>
+      </ul>
+      <button class="button modal-basket__form-add" type="submit">Добавить</button>
+    </form>
   </section>
 
   <script src="js/picturefill.min.js"></script>

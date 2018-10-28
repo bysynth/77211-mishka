@@ -74,7 +74,7 @@
     </nav>
     <section class="hero hero--main-page">
       <div class="hero__wrapper">
-        <h1 class="hero__title">Милые штуки ручной<br> работы для дома</h1>
+        <h1 class="hero__title">Милые штуки ручной работы&nbsp;для дома</h1>
         <ul class="hero__list">
           <li class="hero__item">
             <a class="hero__link hero__link--interior" href="catalog.html?interior">
@@ -132,7 +132,7 @@
         </picture>
         <div class="featured__buy">
           <p class="featured__price">Цена: 990 руб.</p>
-          <a class="button featured__order js-basket" href="size.html">Заказать</a>
+          <a class="button featured__order js-basket" href="?open-sizes">Заказать</a>
         </div>
       </div>
     </section>
@@ -199,7 +199,7 @@
             <span class="visually-hidden">Вперед</span>
           </button>
         </p>
-        <a class="button reviews__write" href="white-review.html">Написать</a>
+        <a class="button reviews__write" href="write-review.html">Написать</a>
       </div>
     </section>
     <section class="contacts">
@@ -283,12 +283,23 @@
   <section class="modal modal-basket">
     <h2 class="modal-basket__title">Добавить в корзину</h2>
     <p class="modal-basket__text">Выберите размер:</p>
-    <div class="modal-basket__size">
-      <button class="button modal-basket__size-button modal-basket__size-button--active">S</button>
-      <button class="button modal-basket__size-button">M</button>
-      <button class="button modal-basket__size-button">L</button>
-    </div>
-    <a class="button modal-basket__add" href="#">Добавить</a>
+    <form class="modal-basket__form" action="https://echo.htmlacademy.ru" method="GET">
+      <ul class="modal-basket__form-list">
+        <li class="modal-basket__form-item">
+          <input class="visually-hidden modal-basket__input" type="radio" name="size" id="small" value="small" checked>
+          <label class="modal-basket__label" for="small">S</label>
+        </li>
+        <li class="modal-basket__form-item">
+          <input class="visually-hidden modal-basket__input" type="radio" name="size" id="medium" value="medium">
+          <label class="modal-basket__label" for="medium">M</label>
+        </li>
+        <li class="modal-basket__form-item">
+          <input class="visually-hidden modal-basket__input" type="radio" name="size" id="large" value="large">
+          <label class="modal-basket__label" for="large">L</label>
+        </li>
+      </ul>
+      <button class="button modal-basket__form-add" type="submit">Добавить</button>
+    </form>
   </section>
 
   <script src="js/picturefill.min.js"></script>
